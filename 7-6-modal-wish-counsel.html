@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<!--begin::Head-->
+	<head><base href="">
+		<title>Microprotect Insucore IAS</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="" />
+		<link rel="canonical" href="" />
+		<link rel="shortcut icon" href="assets/media/logos/favicon-2.ico" />
+		<!--begin::Fonts-->
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'bxk2thj',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+		<!--end::Fonts-->
+		<!--begin::Page Vendor Stylesheets(used by this page)-->
+		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendor Stylesheets-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:40px;--kt-toolbar-height-tablet-and-mobile:40px" data-kt-aside-minimize="on">
+		<!--루트 시작-->
+		<div class="d-flex flex-column flex-root">
+			<!--페이지 시작-->
+			<div class="page d-flex flex-row flex-column-fluid">
+				<!--어사이드 시작-->
+				<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+					<!--브랜드 시작-->
+					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+						<a href="#">
+							<img alt="Logo" src="./assets/media/logos/logo-1-light.svg" class="h-25px logo" />
+						</a>
+						<!--어사이드 토글러-->
+						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+							<span class="svg-icon svg-icon-1 rotate-180">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor" />
+									<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor" />
+								</svg>
+							</span>
+						</div>
+					</div>
+					<!--브랜드 끝-->
+					<!--어사이드 메뉴 시작-->
+					<div class="aside-menu flex-column-fluid">
+						<!--어사이드 메뉴 시작 2-->
+						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+							<!--메뉴 시작-->
+							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
+								<!--1.사원관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M20 14h-2v-4h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1Zm1 5v-2c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Zm0-12V5c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Z" fill="currentColor"/>
+													<path opacity=".3" d="M17 22H3c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v18c0 .6-.4 1-1 1ZM10 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm3.3 9c.7 0 1.2-.7 1-1.3-.6-1.5-2.3-2.7-4.2-2.7-2 0-3.6 1.1-4.2 2.7-.3.6.3 1.3 1.5 1.3h5.9Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">사원관리</span>
+										<span class="menu-arrow"></span>
+									</span>
+
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="#">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">사원정보관리</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--1.사원관리 끝-->
+								<!--2.배당관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M10.96 12.913h7.9c.6 0 1.1.5 1 1.1-.6 5-5.4 8.7-10.6 7.7-3.6-.7-6.4-3.5-7.1-7.1-1-5.3 2.8-10 7.7-10.6.6-.1 1.1.4 1.1 1v7.9Z" fill="currentColor"/>
+													<path d="M12.96 10.913v-7.9c0-.6.5-1.1 1.1-1 2 .2 3.8 1.1 5.2 2.6 1.4 1.4 2.3 3.3 2.6 5.2.1.6-.4 1.1-1 1.1h-7.9Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">배당관리</span>
+										<span class="menu-arrow"></span>
+									</span>
+
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="#">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">배당현황</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="#">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">배당룰 관리</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--2.배당관리 끝-->
+								<!--3.상담관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M8 8c0-.6.4-1 1-1h7V3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h2v2.1c0 .7.8 1 1.3.5L8 14.9V8Z" fill="currentColor"/>
+													<path d="M22 8v10c0 .6-.4 1-1 1h-2v2.1c0 .7-.8 1-1.3.5L15 18.9H9c-.6 0-1-.4-1-1v-10c0-.6.4-1 1-1h12c.6.1 1 .5 1 1.1Zm-3 3c0-.6-.4-1-1-1h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1Zm-2 4c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1s.4 1 1 1h4c.6 0 1-.4 1-1Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">상담관리</span>
+										<span class="menu-arrow"></span>
+									</span>
+
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="#">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">상담현황</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="#">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">상담일정</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--3.상담관리 끝-->
+								<!--4.계약관리 시작-->
+								<div class="menu-item menu-accordion">
+									<a class="menu-link" href="#ㄴ">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" fill="currentColor"/>
+													<path d="m20 8-6-6v4a2 2 0 0 0 2 2h4ZM10.363 14.008 8.92 12.643a.897.897 0 1 0-1.233 1.302l2.537 2.404a1 1 0 0 0 1.376 0l4.711-4.463a.897.897 0 0 0-1.233-1.302l-3.616 3.424a.8.8 0 0 1-1.1 0Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">계약관리</span>
+									</a>
+								</div>
+								<!--4.계약관리 끝-->
+								<!--5.통계 시작-->
+								<div class="menu-item menu-accordion">
+									<a class="menu-link" href="#">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M11 11h2c.6 0 1 .4 1 1v9h-4v-9c0-.6.4-1 1-1Zm5-8v18h4V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1Z" fill="currentColor"/>
+													<path d="M21 20H8v-4c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v4H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">통계</span>
+									</a>
+								</div>
+								<!--5.통계 끝-->
+							</div>
+							<!--메뉴 끝-->
+						</div>
+						<!--어사이드 메뉴 끝 2-->
+					</div>
+					<!--어사이드 메뉴 끝-->
+				</div>
+				<!--어사이드 끝-->
+
+				<!--랩퍼 시작-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+					<!--헤더 시작-->
+					<div id="kt_header" style class="header align-items-stretch">
+						<!--컨테이너 시작-->
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--랩퍼 시작 2-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+								<!--네브바 시작-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav">
+									<!--메뉴 랩퍼 시작-->
+									<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+
+									</div>
+									<!--메뉴 랩퍼 끝-->
+								</div>
+								<!--네브바 끝-->
+
+								<!--툴바 랩퍼 시작-->
+								<div class="d-flex align-items-stretch flex-shrink-0">
+									<!--유저메뉴 시작-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+										<!--유저 정보 시작-->
+										<div class="d-flex flex-column px-3">
+											<div class="fw-bolder d-flex align-items-center fs-5">김마프
+												<span class="fw-bold text-muted fs-7 px-1">123456</span>
+											</div>
+										</div>
+										<div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+											<img src="./assets/media/svg/avatars/blank.svg" alt="user" />
+										</div>
+										<!--유저 정보 끝-->
+										<!--유저 계정 메뉴 시작-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
+											<div class="menu-item px-5">
+												<a href="../../demo1/dist/account/overview.html" class="menu-link px-5">비밀번호 변경</a>
+											</div>
+											<div class="menu-item px-5">
+												<a href="../../demo1/dist/authentication/flows/basic/sign-in.html" class="menu-link px-5">로그아웃</a>
+											</div>
+										</div>
+										<!--유저 계정 메뉴 끝-->
+									</div>
+									<!--유저메뉴 끝-->
+								</div>
+								<!--툴바 랩퍼 끝-->
+							</div>
+							<!--랩퍼 끝 2-->
+						</div>
+						<!--컨테이너 끝-->
+					</div>
+					<!--헤더 끝-->
+
+					<!--콘텐트 시작-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<!--툴바 시작-->
+						<div class="toolbar" id="kt_toolbar">
+							<!--컨테이너 시작-->
+							<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+								<!--페이지 타이틀 시작-->
+								<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+									<h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">배당관리</h1>
+									<span class="h-20px border-gray-300 border-start mx-4"></span>
+									<!--사이트이동경로 시작-->
+									<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+										<li class="breadcrumb-item text-muted">
+											<a href="IAS.html" class="text-muted text-hover-primary">홈</a>
+										</li>
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-300 w-5px h-1px"></span>
+										</li>
+										<li class="breadcrumb-item text-muted">배당관리</li>
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-300 w-5px h-1px"></span>
+										</li>
+										<li class="breadcrumb-item text-dark">배당현황</li>
+									</ul>
+									<!--사이트이동경로 끝-->
+								</div>
+								<!--페이지 타이틀 끝-->
+							</div>
+							<!--컨테이너 끝-->
+						</div>
+						<!--툴바 끝-->
+
+						<!--상담희망내용 상세 모달 시작-->
+						<div id="kt_modal_search_department" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered mw-500px">
+								<!--begin::Modal content-->
+								<div class="modal-content">
+									<!--모달 헤더 시작-->
+									<div class="modal-header py-7 d-flex justify-content-between">
+										<h2>상담희망내용 상세</h2>
+										<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+											<span class="svg-icon svg-icon-1">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+													<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+												</svg>
+											</span>
+										</div>
+									</div>
+									<!--모달 헤더 끝-->
+									<!--모달 바디 시작-->
+									<div class="modal-body scroll-y m-5">
+										<div class="d-flex flex-column">
+											<div class="col-lg-12">
+
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														매월 보험료가 부담돼요
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled checked/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														갖고 있는 보험에 대해 설명을 듣고 싶어요
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled checked/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														고혈압, 당뇨가 있어도 가입할 수 있는 보험이 있나요?
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled checked/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														실비 보험료가 계속 인상되는데 다른 실비 보험과 비교해 보고 싶어요
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														자동차 보험이 있는데 운전자 보험이 따로 필요한가요?
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid mb-7">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled/>
+													<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">
+														이미 임플란트를 했는데 치아보험 가입이 가능한가요?
+													</label>
+												</div>
+												<div class="form-check form-check-custom form-check-solid">
+													<div class="flex-column col-lg-12">
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled checked/>
+														<label class="form-check-label fs-4 fw-bold ms-3" for="flexCheckDefault">기타 (직접입력)</label>
+														<textarea name="notes" class="form-control fs-5 fw-bold mt-3" placeholder="" style="height: 7rem;" disabled>실비 청구 이력이 남으면 보험 가입할 때 안 좋을 수 있다던데 사실인가요?</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--모달 바디 끝-->
+								</div>
+								<!--end::Modal content-->
+							</div>
+						</div>
+						<!--상담희망내용 상세 모달 끝-->
+
+					</div>
+					<!--콘텐트 끝-->
+					<!--푸터 시작-->
+					<div class="footer py-3 d-flex flex-lg-column" id="kt_footer">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+							<div class="text-dark order-2 order-md-1">
+								<span class="text-muted fw-bold me-1">2022©</span>
+								<span class="text-gray-800">Microprotect Insucore IAS</span>
+							</div>
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--푸터 끝-->
+				</div>
+				<!--랩퍼 끝-->
+			</div>
+			<!--페이지 끝-->
+		</div>
+		<!--루트 끝-->
+		
+		<!--begin::Scrolltop-->
+		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+			<span class="svg-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor"></rect>
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor"></path>
+				</svg>
+			</span>
+			<!--end::Svg Icon-->
+		</div>
+		<!--end::Scrolltop-->
+
+		<!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="assets/js/custom/apps/customers/list/export.js"></script>
+		<script src="assets/js/custom/apps/customers/list/list.js"></script>
+		<script src="assets/js/custom/apps/customers/add.js"></script>
+		<script src="assets/js/widgets.bundle.js"></script>
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		<!--end::Page Custom Javascript-->
+		<script>
+			$("#kt_datepicker_1").flatpickr();
+		</script>
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+</html>

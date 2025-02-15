@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--begin::Head-->
+<head>
+	<base href="">
+	<title>Microprotect Insucore IAS</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<link rel="canonical" href="" />
+	<link rel="shortcut icon" href="assets/media/logos/favicon-2.ico" />
+	<!--begin::Fonts-->
+	<script>
+		(function (d) {
+			var config = {
+					kitId: 'bxk2thj',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function () {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function () {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<!--end::Fonts-->
+	<!--begin::Page Vendor Stylesheets(used by this page)-->
+	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Vendor Stylesheets-->
+	<!--begin::Global Stylesheets Bundle(used by all pages)-->
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+	<!--end::Global Stylesheets Bundle-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+
+<body id="kt_body"
+	class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
+	style="--kt-toolbar-height:40px;--kt-toolbar-height-tablet-and-mobile:40px" data-kt-aside-minimize="on">
+	<!--루트 시작-->
+	<div class="d-flex flex-column flex-root">
+		<!--페이지 시작-->
+		<div class="page d-flex flex-row flex-column-fluid">
+			<!--어사이드 시작-->
+			<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true"
+				data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
+				data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+				data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+				<!--브랜드 시작-->
+				<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+					<a href="#">
+						<img alt="Logo" src="./assets/media/logos/logo-1-light.svg" class="h-25px logo" />
+					</a>
+					<!--어사이드 토글러-->
+					<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
+						data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+						data-kt-toggle-name="aside-minimize">
+						<span class="svg-icon svg-icon-1 rotate-180">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								fill="none">
+								<path opacity="0.5"
+									d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z"
+									fill="currentColor" />
+								<path
+									d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z"
+									fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<!--브랜드 끝-->
+				<!--어사이드 메뉴 시작-->
+				<div class="aside-menu flex-column-fluid">
+					<!--어사이드 메뉴 시작 2-->
+					<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true"
+						data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
+						data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer"
+						data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+						<!--메뉴 시작-->
+						<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
+							id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
+							<!--1.사원관리 시작-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span class="menu-link">
+									<span class="menu-icon">
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none">
+												<path d="M20 14h-2v-4h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1Zm1 5v-2c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Zm0-12V5c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Z" fill="currentColor" />
+												<path opacity=".3" d="M17 22H3c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v18c0 .6-.4 1-1 1ZM10 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm3.3 9c.7 0 1.2-.7 1-1.3-.6-1.5-2.3-2.7-4.2-2.7-2 0-3.6 1.1-4.2 2.7-.3.6.3 1.3 1.5 1.3h5.9Z" fill="currentColor" />
+											</svg>
+										</span>
+									</span>
+									<span class="menu-title">사원관리</span>
+									<span class="menu-arrow"></span>
+								</span>
+
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<div class="menu-item">
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">사원정보관리</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--1.사원관리 끝-->
+							<!--2.배당관리 시작-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span class="menu-link">
+									<span class="menu-icon">
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none">
+												<path opacity=".3"
+													d="M10.96 12.913h7.9c.6 0 1.1.5 1 1.1-.6 5-5.4 8.7-10.6 7.7-3.6-.7-6.4-3.5-7.1-7.1-1-5.3 2.8-10 7.7-10.6.6-.1 1.1.4 1.1 1v7.9Z"
+													fill="currentColor" />
+												<path
+													d="M12.96 10.913v-7.9c0-.6.5-1.1 1.1-1 2 .2 3.8 1.1 5.2 2.6 1.4 1.4 2.3 3.3 2.6 5.2.1.6-.4 1.1-1 1.1h-7.9Z"
+													fill="currentColor" />
+											</svg>
+										</span>
+									</span>
+									<span class="menu-title">배당관리</span>
+									<span class="menu-arrow"></span>
+								</span>
+
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<div class="menu-item">
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">배당현황</span>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">배당룰 관리</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--2.배당관리 끝-->
+							<!--3.상담관리 시작-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span class="menu-link">
+									<span class="menu-icon">
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none">
+												<path opacity=".3"
+													d="M8 8c0-.6.4-1 1-1h7V3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h2v2.1c0 .7.8 1 1.3.5L8 14.9V8Z"
+													fill="currentColor" />
+												<path
+													d="M22 8v10c0 .6-.4 1-1 1h-2v2.1c0 .7-.8 1-1.3.5L15 18.9H9c-.6 0-1-.4-1-1v-10c0-.6.4-1 1-1h12c.6.1 1 .5 1 1.1Zm-3 3c0-.6-.4-1-1-1h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1Zm-2 4c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1s.4 1 1 1h4c.6 0 1-.4 1-1Z"
+													fill="currentColor" />
+											</svg>
+										</span>
+									</span>
+									<span class="menu-title">상담관리</span>
+									<span class="menu-arrow"></span>
+								</span>
+
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<div class="menu-item">
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">상담현황</span>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">상담일정</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--3.상담관리 끝-->
+							<!--4.계약관리 시작-->
+							<div class="menu-item menu-accordion">
+								<a class="menu-link" href="#ㄴ">
+									<span class="menu-icon">
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none">
+												<path opacity=".3"
+													d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"
+													fill="currentColor" />
+												<path
+													d="m20 8-6-6v4a2 2 0 0 0 2 2h4ZM10.363 14.008 8.92 12.643a.897.897 0 1 0-1.233 1.302l2.537 2.404a1 1 0 0 0 1.376 0l4.711-4.463a.897.897 0 0 0-1.233-1.302l-3.616 3.424a.8.8 0 0 1-1.1 0Z"
+													fill="currentColor" />
+											</svg>
+										</span>
+									</span>
+									<span class="menu-title">계약관리</span>
+								</a>
+							</div>
+							<!--4.계약관리 끝-->
+							<!--5.통계 시작-->
+							<div class="menu-item menu-accordion">
+								<a class="menu-link" href="#">
+									<span class="menu-icon">
+										<span class="svg-icon svg-icon-2">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none">
+												<path opacity=".3"
+													d="M11 11h2c.6 0 1 .4 1 1v9h-4v-9c0-.6.4-1 1-1Zm5-8v18h4V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1Z"
+													fill="currentColor" />
+												<path
+													d="M21 20H8v-4c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v4H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1Z"
+													fill="currentColor" />
+											</svg>
+										</span>
+									</span>
+									<span class="menu-title">통계</span>
+								</a>
+							</div>
+							<!--5.통계 끝-->
+						</div>
+						<!--메뉴 끝-->
+					</div>
+					<!--어사이드 메뉴 끝 2-->
+				</div>
+				<!--어사이드 메뉴 끝-->
+			</div>
+			<!--어사이드 끝-->
+
+			<!--랩퍼 시작-->
+			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+				<!--헤더 시작-->
+				<div id="kt_header" style class="header align-items-stretch">
+					<!--컨테이너 시작-->
+					<div class="container-fluid d-flex align-items-stretch justify-content-between">
+						<!--랩퍼 시작 2-->
+						<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+							<!--네브바 시작-->
+							<div class="d-flex align-items-stretch" id="kt_header_nav">
+								<!--메뉴 랩퍼 시작-->
+								<div class="header-menu align-items-stretch" data-kt-drawer="true"
+									data-kt-drawer-name="header-menu"
+									data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
+									data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+									data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle"
+									data-kt-swapper="true" data-kt-swapper-mode="prepend"
+									data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+
+								</div>
+								<!--메뉴 랩퍼 끝-->
+							</div>
+							<!--네브바 끝-->
+
+							<!--툴바 랩퍼 시작-->
+							<div class="d-flex align-items-stretch flex-shrink-0">
+								<!--유저메뉴 시작-->
+								<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+									<!--유저 정보 시작-->
+									<div class="d-flex flex-column px-3">
+										<div class="fw-bolder d-flex align-items-center fs-5">김마프
+											<span class="fw-bold text-muted fs-7 px-1">123456</span>
+										</div>
+									</div>
+									<div class="cursor-pointer symbol symbol-30px symbol-md-40px"
+										data-kt-menu-trigger="click" data-kt-menu-attach="parent"
+										data-kt-menu-placement="bottom-end">
+										<img src="./assets/media/svg/avatars/blank.svg" alt="user" />
+									</div>
+									<!--유저 정보 끝-->
+									<!--유저 계정 메뉴 시작-->
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px"
+										data-kt-menu="true">
+										<div class="menu-item px-5">
+											<a href="../../demo1/dist/account/overview.html" class="menu-link px-5">비밀번호
+												변경</a>
+										</div>
+										<div class="menu-item px-5">
+											<a href="../../demo1/dist/authentication/flows/basic/sign-in.html"
+												class="menu-link px-5">로그아웃</a>
+										</div>
+									</div>
+									<!--유저 계정 메뉴 끝-->
+								</div>
+								<!--유저메뉴 끝-->
+							</div>
+							<!--툴바 랩퍼 끝-->
+						</div>
+						<!--랩퍼 끝 2-->
+					</div>
+					<!--컨테이너 끝-->
+				</div>
+				<!--헤더 끝-->
+
+				<!--콘텐트 시작-->
+				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+					<!--툴바 시작-->
+					<div class="toolbar" id="kt_toolbar">
+						<!--컨테이너 시작-->
+						<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+							<!--페이지 타이틀 시작-->
+							<div data-kt-swapper="true" data-kt-swapper-mode="prepend"
+								data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+								class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+								<h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">배당관리</h1>
+								<span class="h-20px border-gray-300 border-start mx-4"></span>
+								<!--사이트이동경로 시작-->
+								<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+									<li class="breadcrumb-item text-muted">
+										<a href="IAS.html" class="text-muted text-hover-primary">홈</a>
+									</li>
+									<li class="breadcrumb-item">
+										<span class="bullet bg-gray-300 w-5px h-1px"></span>
+									</li>
+									<li class="breadcrumb-item text-muted">배당관리</li>
+									<li class="breadcrumb-item">
+										<span class="bullet bg-gray-300 w-5px h-1px"></span>
+									</li>
+									<li class="breadcrumb-item text-dark">배당현황</li>
+								</ul>
+								<!--사이트이동경로 끝-->
+							</div>
+							<!--페이지 타이틀 끝-->
+						</div>
+						<!--컨테이너 끝-->
+					</div>
+					<!--툴바 끝-->
+
+					<!--모달 시작-->
+					<div id="kt_modal_create_account" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+						<!--begin::Modal dialog-->
+						<div class="modal-dialog mw-900px">
+							<!--모달 콘텐츠 시작-->
+							<div class="modal-content">
+								<!--모달 헤더 시작-->
+								<div class="modal-header row" id="kt_modal_add_customer_header">
+									<h2 class="fw-bolder col-md-6">배당하기</h2>
+									<div class="col-md-6 text-end">
+										<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+											<span class="svg-icon svg-icon-1">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+													<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+												</svg>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-12 mt-4">
+										<div class="fs-5 fw-bold">총
+											<span class="text-primary fw-bolder">1,234건</span>의 내역에 사원을 배당합니다
+										</div>
+										<!--스텝3 배당 완료 메세지로 전환-->
+										<div class="fs-5 fw-bold d-none">배당이 완료되었습니다</div>
+									</div>
+								</div>
+								<!--모달 헤더 끝-->
+								<!--모달 바디 시작-->
+								<div class="modal-body scroll-y m-5">
+									<!--begin::Stepper-->
+									<div class="stepper stepper-links d-flex flex-column" id="kt_create_account_stepper">
+										<!--네브 시작-->
+										<div class="stepper-nav mb-10">
+												<!--begin::Step 1-->
+												<div class="stepper-item current" data-kt-stepper-element="nav">
+													<h3 class="stepper-title">1. 사원선택</h3>
+												</div>
+												<!--end::Step 1-->
+												<!--begin::Step 4-->
+												<div class="stepper-item" data-kt-stepper-element="nav">
+													<h3 class="stepper-title">2. 배당하기</h3>
+												</div>
+												<!--end::Step 4-->
+												<!--begin::Step 5-->
+												<div class="stepper-item" data-kt-stepper-element="nav">
+													<h3 class="stepper-title">3. 배당완료</h3>
+												</div>
+												<!--end::Step 5-->
+										</div>
+										<!--네브 끝-->
+
+										<!--폼 시작-->
+										<form class="mx-auto w-100" novalidate="novalidate" id="kt_create_account_form">
+											<!--스텝1 화면 시작-->
+											<div class="current mb-6" data-kt-stepper-element="content">
+												<div class="w-100">
+													<div class="fv-row">
+														<!--begin::Row-->
+														<div class="row">
+															<!--좌측화면 시작-->
+															<div class="col-lg-6">
+																<div class="card card-flush table-border min-h-550px">
+																	<!--카드 헤더 시작-->
+																	<div class="card-header pt-7" id="kt_chat_contacts_header" style="padding: 0 1.6rem;">
+																		<form autocomplete="off">
+																			<div class="d-flex flex-stack">
+																				<input type="text" class="form-control min-w-280px" name="search" value="" placeholder="소속 부서, 사원번호, 사원명" />
+																			</div>
+																		</form>
+																		<button type="submit" href="#" class="btn btn-light-primary" >
+																			검색
+																		</button>
+																	</div>
+																	<!--카드 헤더 끝-->
+																	<!--카드 바디 시작-->
+																	<div class="card-body pt-5" id="kt_chat_contacts_body">
+																		<div class="d-flex hover-scroll h-400px" data-kt-element="categories" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_header, #kt_toolbar, #kt_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer" data-kt-scroll-wrappers="#kt_content, #kt_chat_messenger_body" data-kt-scroll-offset="5px">
+	
+																			<!--메뉴트리 시작-->
+																			<form action="javascript:void(0)" class="mt-2">
+																				<div class="flex-center">
+																					<ul id="tree-checkmenu" class="checktree menu fs-5 fw-bold">
+	
+																						<li id="show-root">
+																							<div class="form-check form-check-custom row">
+																								<input id="check-root" class="form-check-input me-2" type="checkbox" style="background-size: 60% 60%">인슈코어
+																								<ul id="tree-root" class="my-lg-3" style="list-style: none;">
+	
+																									<li id="show-department">
+																										<div class="form-check form-check-custom row">
+																											<input id="check-department" class="form-check-input me-2" type="checkbox" style="background-size: 60% 60%">수도권사업부
+																											<ul id="tree-department" class="my-lg-3" style="list-style: none;">
+	
+																												<li id="show-store">
+																													<div class="form-check form-check-custom row">
+																														<input id="check-store" class="form-check-input me-2" type="checkbox" style="background-size: 60% 60%">교대지점
+																														<ul id="tree-store" class="my-lg-3" style="list-style: none;">
+	
+																															<li id="show-team">
+																																<div class="form-check form-check-custom row">
+																																	<input id="check-team" class="form-check-input me-2" type="checkbox" style="background-size: 60% 60%">1팀
+																																	<ul id="tree-team" class="my-lg-3" style="list-style: none;">
+	
+																																		<li class="form-check form-check-custom my-lg-3">
+																																			<input class="form-check-input me-2" type="checkbox">김보험(2200001)
+																																		</li>
+																																		<li class="form-check form-check-custom my-lg-3">
+																																			<input class="form-check-input me-2" type="checkbox">이마프(2200002)
+																																		</li>
+																																		<li class="form-check form-check-custom my-lg-3">
+																																			<input class="form-check-input me-2" type="checkbox">최규엄(2200003)
+																																		</li>
+																																		<li class="form-check form-check-custom my-lg-3 last">
+																																			<input class="form-check-input me-2" type="checkbox">하배당(2200004)
+																																		</li>
+	
+																																	</ul>
+																																</div>
+																															</li>
+	
+																															<li class="form-check form-check-custom my-lg-3">
+																																<input class="form-check-input me-2" type="checkbox">2팀
+																															</li>
+																															<li class="form-check form-check-custom my-lg-3 last">
+																																<input class="form-check-input me-2" type="checkbox">3팀
+																															</li>
+																														</ul>
+																													</div>
+																												</li>
+																											</ul>
+																										</div>
+																									</li>
+																								</ul>
+																							</div>
+																						</li>
+																					</ul>
+																				</div>
+																			</form>
+																			<!--메뉴트리 끝-->
+	
+																			<!--검색 내용 없을 때-->
+																			<div class="d-flex fs-5 text-disabled flex-center d-none" style="width: 100%; min-height: 400px;">일치하는 사원 정보가 없습니다</div>
+																		</div>
+																	</div>
+																	<!--카드 바디 끝-->
+																</div>
+															</div>
+															<!--좌측화면 끝-->
+															<!--우측화면 시작-->
+															<div class="col-lg-6">
+																<!--begin::Option-->
+																<div class="card table-border min-h-550px" id="kt_chat_messenger">
+																<!--카드 헤더 시작-->
+																<div class="card-header pt-7 align-items-center" id="kt_chat_contacts_header" style="border-bottom: 0; padding: 0 1.6rem;">
+																	<div class="col-md-6 fs-3 fw-bold">
+																		<span class="text-primary">5</span>
+																		명 선택
+																	</div>
+																	<button type="button" href="#" class="btn btn-secondary" >
+																		전체삭제
+																	</button>
+																</div>
+																<!--카드 헤더 끝-->
+																<!--카드 바디 시작-->
+																<div class="card-body" id="kt_chat_messenger_body">
+																	<!--리스트 시작-->
+																	<div class="h-lg-auto" data-kt-element="distribute-lists" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_header, #kt_toolbar, #kt_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer" data-kt-scroll-wrappers="#kt_content, #kt_chat_messenger_body" data-kt-scroll-offset="5px">
+																		<ul class="list-unstyled list-inline hover-scroll h-400px">
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				김보험(2200001)
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				이마프(2200002)
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				최규엄(2200003)
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				하배당(2200004)
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				김마리아(1900001)
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																			<li class="form-check-label fs-5 fw-bold my-lg-1">
+																				스크롤 테스트
+																				<div class="btn btn-icon btn-sm btn-active-icon-primary">
+																					<span class="svg-icon svg-icon-1 pt-1">
+																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																							<rect opacity="0.5" x="5" y="10" width="12" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																							<rect x="2" y="9" width="12" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																					</span>
+																				</div>
+																			</li>
+																		</ul>
+																	</div>
+																	<!--리스트 끝-->
+																</div>
+																<!--카드 바디 끝-->
+															</div>
+																<!--end::Option-->
+															</div>
+															<!--우측화면 끝-->
+														</div>
+														<!--end::Row-->
+													</div>
+												</div>
+											</div>
+											<!--스텝1 화면 끝-->
+											<!--스텝2 화면 시작-->
+											<div data-kt-stepper-element="content" class="pending">
+												<div class="w-100 d-flex flex-column min-h-550px">
+													<div class="table-responsive">
+														<table class="table table-rounded border gy-5 gs-3 mb-6 overflow-hidden">
+															<colgroup> 
+																<col style="width: 10%;">
+																<col style="width: 20%;">
+																<col style="width: 20%;">
+																<col style="width: 15%;">
+																<col style="width: 35%;">
+															</colgroup> 
+															<thead class="table-active text-center table-row-bordered">
+																<tr class="fw-bold fs-5 text-dark border-bottom-2 border-gray-200">
+																	<th class="border-end">No</th> 
+																	<th class="border-end">사원번호</th> 
+																	<th class="border-end">사원명</th>
+																	<th class="border-end">선호보험연령</th>
+																	<th>최대배당건수</th>
+																</tr>
+															</thead> 
+															<tbody class="fw-bold fs-5 text-gray-800 hover-scroll"> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">1</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">2</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">3</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">4</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">5</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr>
+																<!--리스트 추가 5-->
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">6</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">7</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">8</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">9</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">10</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">0 ~ 99</td>
+																	<td class="d-flex flex-center">
+																		<!--begin::Dialer-->
+																		<div class="position-relative w-md-225px"
+																			data-kt-dialer="true"
+																			data-kt-dialer-min="5"
+																			data-kt-dialer-max="999"
+																			data-kt-dialer-step="1"
+																			data-kt-dialer-prefix=""
+																			data-kt-dialer-decimals="">
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+
+																			<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																			<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																				<span class="svg-icon svg-icon-1">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																						<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																						<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																						<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																					</svg>
+																				</span>
+																			</button>
+																		</div>
+																		<!--end::Dialer-->
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<!--스텝2 화면 끝-->
+
+											<!--스텝3 화면 시작-->
+											<div data-kt-stepper-element="content" class="pending">
+												<div class="w-100 d-flex flex-column min-h-550px">
+													<div class="col-md-12 mb-10">
+														<div class="fs-5 fw-bold">
+															<span class="svg-icon svg-icon-1 me-2">
+																<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path opacity=".3" d="M14 3v17H2V3c0-.6.4-1 1-1h10c.6 0 1 .4 1 1Zm-3 10v-2c0-1.3-.8-2.4-2-2.8V7c0-.6-.4-1-1-1s-1 .4-1 1v1.2c-1.2.4-2 1.5-2 2.8v2c0 .6-.4 1-1 1v1c0 .6.4 1 1 1h6c.6 0 1-.4 1-1v-1c-.6 0-1-.4-1-1Z" fill="currentColor"/>
+																	<path d="M2 20h12v1c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1v-1ZM9 3V2H7v1c0 .6.4 1 1 1s1-.4 1-1ZM6.5 16c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5h-3Zm15.2-4c0-.6-.4-1-1-1h-3.1c-.6 0-1 .4-1 1s.4 1 1 1h3.1c.5 0 1-.4 1-1ZM17 8c-.4 0-.8-.2-.9-.6-.2-.5 0-1.1.5-1.3L19.1 5c.5-.2 1.1 0 1.3.5.2.5 0 1.1-.5 1.3l-2.5 1.1c-.1.1-.3.1-.4.1Zm2.5 11.1c-.1 0-.3 0-.4-.1l-2.5-1.1c-.5-.2-.7-.8-.5-1.3.2-.5.8-.7 1.3-.5l2.5 1.1c.5.2.7.8.5 1.3-.2.4-.5.6-.9.6Z" fill="currentColor"/>
+																</svg>
+															</span>
+															배당결과 : 1,234건 배당요청,
+															<span class="text-primary fw-bolder">1,000건 배당성공,</span>
+															<span class="text-danger fw-bolder">234건 배당실패</span>
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table class="table table-rounded border gy-5 gs-3 mb-6 overflow-hidden">
+															<colgroup> 
+																<col style="width: 10%;">
+																<col style="width: 20%;">
+																<col style="width: 20%;">
+																<col style="width: 25%;">
+																<col style="width: 25%;">
+															</colgroup> 
+															<thead class="table-active text-center table-row-bordered">
+																<tr class="fw-bold fs-5 text-dark border-bottom-2 border-gray-200">
+																	<th class="border-end">No</th> 
+																	<th class="border-end">사원번호</th> 
+																	<th class="border-end">사원명</th>
+																	<th class="border-end">최대배당건수</th>
+																	<th>배당완료건수</th>
+																</tr>
+															</thead> 
+															<tbody class="fw-bold fs-5 text-gray-800"> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">1</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">5</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">2</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">5</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">3</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">6</td>
+																	<td class="text-primary">4</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">4</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">10</td>
+																	<td class="text-primary">8</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">5</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">1</td>
+																	<td class="text-danger">0</td>
+																</tr>
+																<!--리스트 추가 5-->
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">6</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">5</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">7</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">5</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">8</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">5</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">9</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">5</td>
+																	<td class="text-primary">3</td>
+																</tr> 
+																<tr class="align-middle text-center border-bottom">
+																	<td class="border-end">10</td>
+																	<td class="border-end">2200001</td>
+																	<td class="border-end">김보험</td>
+																	<td class="border-end">3</td>
+																	<td class="text-primary">3</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<!--스텝3 화면 끝-->
+
+											<!--버튼 액션 시작-->
+											<div class="d-flex flex-stack">
+												<!--begin::Wrapper-->
+												<div class="mr-2">
+													<button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
+													<span class="svg-icon svg-icon-4 me-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1" fill="currentColor" />
+															<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="currentColor" />
+														</svg>
+													</span>
+														이전
+													</button>
+													<button type="button" class="btn btn-lg btn-secondary" data-kt-stepper-action="exit">닫기</button>
+												</div>
+												<!--end::Wrapper-->
+												<!--begin::Wrapper-->
+												<div>
+													<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
+														<span class="indicator-label">배당하기
+															<span class="svg-icon svg-icon-3 ms-2 me-0">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+																</svg>
+															</span>
+														</span>
+														<span class="indicator-progress">배당 중
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+													<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next" onclick="nextPage(event)">다음
+														<span class="svg-icon svg-icon-4 ms-1 me-0">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+																<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+															</svg>
+														</span>
+													</button>
+												</div>
+												<!--end::Wrapper-->
+											</div>
+											<!--버튼 액션 끝-->
+										</form>
+										<!--폼 끝-->
+									</div>
+									<!--end::Stepper-->
+								</div>
+								<!--모달 바디 끝-->
+							</div>
+							<!--모달 콘텐츠 끝-->
+						</div>
+						<!--end::Modal dialog-->
+					</div>
+					<!--모달 끝-->
+
+				</div>
+				<!--콘텐트 끝-->
+				<!--푸터 시작-->
+				<div class="footer py-3 d-flex flex-lg-column" id="kt_footer">
+					<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+						<div class="text-dark order-2 order-md-1">
+							<span class="text-muted fw-bold me-1">2022©</span>
+							<span class="text-gray-800">Microprotect Insucore IAS</span>
+						</div>
+					</div>
+				</div>
+				<!--푸터 끝-->
+			</div>
+			<!--랩퍼 끝-->
+		</div>
+		<!--페이지 끝-->
+	</div>
+	<!--루트 끝-->
+
+	<!--begin::Scrolltop-->
+	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+		<span class="svg-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+					fill="currentColor"></rect>
+				<path
+					d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+					fill="currentColor"></path>
+			</svg>
+		</span>
+		<!--end::Svg Icon-->
+	</div>
+	<!--end::Scrolltop-->
+
+	<!--begin::Javascript-->
+	<script>var hostUrl = "assets/";</script>
+	<!--begin::Global Javascript Bundle(used by all pages)-->
+	<script src="assets/plugins/global/plugins.bundle.js"></script>
+	<script src="assets/js/scripts.bundle.js"></script>
+	<!--end::Global Javascript Bundle-->
+	<!--begin::Page Vendors Javascript(used by this page)-->
+	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+	<!--end::Page Vendors Javascript-->
+	<!--begin::Page Custom Javascript(used by this page)-->
+	<script src="assets/js/widgets.bundle.js"></script>
+	<script src="assets/js/custom/widgets.js"></script>
+	<!--end::Page Custom Javascript-->
+	<!--end::Javascript-->
+	<!--커스텀 스크립트 시작-->
+	<script src="assets/js/custom/utilities/modals/account.custom.js"></script>
+	<!--커스텀 스크립트 끝-->
+	<!--메뉴트리 스크립트 시작-->
+	<script type="text/javascript">
+		function CheckTree(myName) {
+			this.myName = myName;
+			this.root = null;
+			this.countAllLevels = false;
+			this.checkFormat = '(%n% checked)';
+			this.evtProcessed = navigator.userAgent.indexOf('Safari') > -1 ? 'safRtnVal' : 'returnValue';
+				CheckTree.list[myName] = this;
+		};
+		CheckTree.list = [];
+		
+		
+		// Called onload, this sets up a reference to the 'root' node and hides sublevels.
+		CheckTree.prototype.init = function() { with (this)
+		{
+			if (!document.getElementById) return;
+			root = document.getElementById('tree-' + myName);
+			if (root)
+			{
+			var lists = root.getElementsByTagName('ul');
+			for (var ul = 0; ul < lists.length; ul++)
+			{
+			 // Hide all UL sublevels under the root node, and assign them a toggle/click methods.
+				lists[ul].style.display = 'none';
+				lists[ul].treeObj = this;
+				lists[ul].setBoxStates = setBoxStates;
+		
+				var fn = new Function('e', 'this.setBoxStates(e)');
+			 // Grr, workaronud another Safari bug.
+				if (lists[ul].addEventListener && navigator.vendor != 'Apple Computer, Inc.')
+				{
+				lists[ul].addEventListener('click', fn, false);
+				}
+				else lists[ul].onclick = fn;
+			}
+		
+			// Now do a similar event capture setup for the 'root' node.
+			root.treeObj = this;
+			root.setBoxStates = setBoxStates;
+			if (root.addEventListener && navigator.vendor != 'Apple Computer, Inc.')
+			{
+				root.addEventListener('click', new Function('e', myName + '.click(e)'), false);
+			}
+			else root.onclick = new Function('e', myName + '.click(e)');
+			// Trigger a quick state update, to set the counters for each level.
+			root.setBoxStates({}, true, true);
+		
+			// Now go through and assign plus/plus-last classes to the appropriate <LI>s.
+			var nodes = root.getElementsByTagName('li');
+			for (var li = 0; li < nodes.length; li++)
+			{
+				if (nodes[li].id.match(/^show-/))
+				{
+				nodes[li].className = (nodes[li].className=='last' ? 'plus-last' : 'plus');
+				}
+				}
+			}
+		}};
+		
+		
+		// Called on click of the entire tree, this manages visibility of sublevels.
+		CheckTree.prototype.click = function(e) { with (this)
+		{
+			e = e || window.event;
+			var elm = e.srcElement || e.target;
+		
+			// Has a checkbox been clicked, but not processed by a lower level onclick event?
+			// If so, one of the 'root' checkboxes must have been clicked.
+			// We must therefore trigger a manual 'downwards route' for that tree to update it.
+			if (!e[evtProcessed] && elm.id && elm.id.match(/^check-(.*)/))
+			{
+			var tree = document.getElementById('tree-' + RegExp.$1);
+			if (tree) tree.setBoxStates(e, true, false);
+			}
+		
+			while (elm)
+			{
+			// Dont' do expand/collapses for clicks on checkboxes, or nested within menus.
+			if (elm.tagName.match(/^(input|ul)/i)) break;
+			// Show/hide the menu element that matches the source id="show-xxx" tag and quit.
+			if (elm.id && elm.id.match(/^show-(.*)/))
+			{
+				var targ = document.getElementById('tree-' + RegExp.$1);
+				if (targ.style)
+				{
+				var col = (targ.style.display == 'none');
+				targ.style.display = col ? 'block' : 'none';
+				// Swap the class of the <span> tag inside, maintaining "-last" state if applied.
+				elm.className = elm.className.replace(col?'plus':'minus', col?'minus':'plus');
+				}
+				break;
+			}
+			// Otherwise, continue looping up the DOM tree, looking for a match.
+			elm = elm.parentNode;
+		}
+		}};
+		
+		function setBoxStates(e, routingDown, countOnly) { with (this)
+		{
+		 // Opera <7 fix... don't perform any actions in those browsers.
+			if (!this.childNodes) return;
+		
+			e = e || window.event;
+			var elm = e.srcElement || e.target;
+		
+			// Initial check: if the parent checkbox for a tree level has been clicked, trigger a
+			// pre-emptive downwards route within that tree, and set returnValue to true so that we
+			// don't repeat it or mess with any of the original checkbox's siblings.
+			if (elm && elm.id && elm.id.match(/^check-(.*)/) && !routingDown && !e[treeObj.evtProcessed])
+			{
+			var refTree = document.getElementById('tree-' + RegExp.$1);
+			if (refTree)
+			{
+				refTree.setBoxStates(e, true, countOnly);
+				e[treeObj.evtProcessed] = true;
+			}
+			}
+		
+			// Some counter and reference variables.
+			var allChecked = true, boxCount = 0, subBoxes = null;
+			// Get the name of this branch and see if the source element has id="check-xxxx".
+			var thisLevel = this.id.match(/^tree-(.*)/)[1];
+			var parBox = document.getElementById('check-' + thisLevel);
+		
+			// Loop through all children of all list elements inside this UL tag.
+			for (var li = 0; li < childNodes.length; li++)
+			{
+			for (var tag = 0; tag < childNodes[li].childNodes.length; tag++)
+			{
+				var child = childNodes[li].childNodes[tag];
+				if (!child) continue;
+				if (child.tagName && child.type && child.tagName.match(/^input/i) &&
+				child.type.match(/^checkbox/i))
+			{
+				// Set this box's state depending on its parent state, if we're routing downwards.
+				if (routingDown && parBox && elm && elm.id && elm.id.match(/^check-/) && !countOnly)
+					child.checked = parBox.checked;
+				// Count the checked boxes directly under this level.
+				allChecked &= child.checked;
+				if (child.checked) boxCount++;
+				}
+				// And route this event to sublevels, to update their nodes, during a downwards route.
+				if (child.tagName && child.tagName.match(/^ul/i) && (!e[treeObj.evtProcessed] || routingDown))
+				child.setBoxStates(e, true, countOnly);
+			}
+		}
+		
+			// Once we've routed the event to all sublevels, set the 'returnValue' to true, so that
+			// upper levels don't re-trigger a downwards route. This is a bit of a hack, admittedly :).
+			if (!routingDown) e[treeObj.evtProcessed] = true;
+		
+			// Next, set the parent parBox state depending if all checkboxes in this menu are checked.
+			// Of course, we don't set its state if it's the source of the event!
+			if (parBox && parBox != elm && !countOnly) parBox.checked = allChecked;
+		
+			// If "countAllLevels" is set, overwrite the previous one-level-only count.
+			if (treeObj.countAllLevels)
+		{
+			boxCount = 0;
+			var subBoxes = this.getElementsByTagName('input');
+			for (var i = 0; i < subBoxes.length; i++) if (subBoxes[i].checked) boxCount++;
+		}
+		
+			// Either way, assign the counted value to the id="count-xxx" page element.
+			var countElm = document.getElementById('count-' + thisLevel);
+			if (countElm)
+			{
+			while (countElm.firstChild) countElm.removeChild(countElm.firstChild);
+			if (boxCount) countElm.appendChild(document.createTextNode(treeObj.checkFormat.replace('%n%',
+				boxCount)));
+			}
+		}};
+		
+		// Calls the init() function of any active trees on page load, and backup previous onloads.
+		var chtOldOL = window.onload;
+		window.onload = function()
+		{
+			if (chtOldOL) chtOldOL();
+			for (var i in CheckTree.list) CheckTree.list[i].init();
+		};
+
+
+		function nextPage(event){
+			
+		}
+	</script>
+	<script type="text/javascript">
+		var checkmenu = new CheckTree('checkmenu');
+	</script>
+	<!--메뉴트리 스크립트 끝-->
+</body>
+<!--end::Body-->
+</html>
