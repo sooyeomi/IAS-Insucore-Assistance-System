@@ -1,0 +1,224 @@
+/* 2줄이상 말줄임 */
+.ellipsis2 {
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+word-wrap: break-word;
+text-overflow: ellipsis;
+overflow: hidden;
+-webkit-line-clamp: 2;
+}
+.svg-icon-login svg {
+  height: 8rem;
+  width: 8rem;
+  color: #A1A5B7;
+}
+.symbol img {
+  border-radius: 3.5rem;
+}
+
+.bg-color-body {
+  background-color: var(--bs-light);
+}
+.click-number {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+.click-number:hover {
+  color: #006dab;
+  text-decoration: underline !important;
+}
+table > tbody .dataTables_empty {
+  display: flex;
+  text-align: center;
+}
+.form-select-disabled {
+  background-color: #EFF2F5 !important;
+  border: 1px solid #E4E6EF !important;
+}
+
+/* 퇴직 font color --bs-danger */
+/* .select2-container--bootstrap5 .select2-selection--single .select2-selection__rendered */
+.retired-color {
+  color: #F1416C !important;
+}
+.select2-container--bootstrap5 .select2-selection--single .select2-selection__rendered {
+  color: inherit;
+}
+.text-disabled {
+  font-size: 1.15rem !important;
+  font-weight: 400 !important;
+  color: #B5B5C3 !important;
+}
+.w-md-35 {
+  width: 35% !important;
+}
+
+/* 작은 버튼 */
+.btn-small-option {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3F4254;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #EFF2F5;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 0.475rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-small-option:hover {
+  color: #009EF7;
+  background-color: #F1FAFF;
+  border-color: #26adf8 !important;
+}
+.btn-small-dark {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #7E8299;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.95rem;
+  border-radius: 0.475rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-small-light-primary {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #009EF7;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #F1FAFF;
+  border: 1px solid #26adf8;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.475rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-lighter-primary {
+  color: #009EF7;
+  background-color: #F1FAFF;
+  border: 1px solid #E4E6EF !important;
+}
+.btn-lighter-primary:hover {
+  color: #fff;
+  background-color: #26adf8;
+  border-color: #1aa8f8 !important;
+}
+
+.tr-hover:hover {
+  background-color: #F1FAFF !important;
+}
+.td-hover:hover {
+  background-color: #F1FAFF !important;
+}
+
+.table-border {
+  border: 1px solid #E4E6EF !important;
+  border-radius: 0.8rem;
+}
+
+.min-w-280px {
+  min-width: 280px !important;
+}
+
+.modal-header > h2 {
+  margin-bottom: 0;
+}
+
+/* 일정 관리 버튼 */
+.btn-manage-schedule {
+  width: 72px !important;
+  height: 34px !important;
+  font-size: 13px !important;
+}
+
+.bg-opacity-15 {
+  --bs-bg-opacity: 0.15;
+}
+
+/* 캘린더 커스텀 */
+.calendar-tr {
+  min-height: 180px !important;
+}
+.calendar-counsel:hover {
+  cursor: pointer;
+}
+
+/* 테이블 커스텀 */
+/* 적용된 페이지 : p27 부서검색 */
+.table-department {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.15rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));
+  border-bottom: 1px solid #EFF2F5;
+}
+.table-category {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.15rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #3F4254;
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.category-ml {
+  margin-left: 1rem;
+}
+.empty-alert {
+  text-align: center;
+  align-self: center;
+  color: #A1A5B7 !important;
+  font-size: 1.15rem;
+  font-weight: lighter;
+}
+/* 테이블 헤더 고정 & 바디에만 스크롤 */
+/* 적용된 페이지 : p36 배당하기 스텝2 화면 */
+.scrolltbody {
+  display: block;
+  width: 815px;
+  border-collapse: collapse;
+}
+.scrolltbody tbody {
+  display: block;
+  height: 763px !important;
+  overflow: auto;
+}
+.scrolltbody tbody > tr {
+  height: 76px;
+}
+.scrolltbody th:nth-of-type(1), .scrolltbody td:nth-of-type(1) { width: 80px; }
+.scrolltbody th:nth-of-type(2), .scrolltbody td:nth-of-type(2) { width: 150px; }
+.scrolltbody th:nth-of-type(3), .scrolltbody td:nth-of-type(3) { width: 150px; }
+.scrolltbody th:nth-of-type(4), .scrolltbody td:nth-of-type(4) { width: 120px; }
+.scrolltbody th:last-child { width: 315px; }
+.scrolltbody td:last-child { width: 315px; }
+
+.rounded-left {
+  border-radius: 0.4rem 0 0 0;
+}
+.rounded-right {
+  border-radius: 0 0.4rem 0 0;
+}
+/* 스크롤 발생 시 마진 컨트롤 */
+/* 적용된 페이지 : p45 상담내역 녹취파일 */
+.scroll-margin-control {
+  margin-right: calc(-0.25 * var(--bs-gutter-x));
+}
