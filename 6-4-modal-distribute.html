@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <!--begin::Head-->
-
 <head>
 	<base href="">
 	<title>Microprotect Insucore IAS</title>
@@ -67,885 +66,570 @@
 	<!--루트 시작-->
 	<div class="d-flex flex-column flex-root">
 		<!--페이지 시작-->
-		<div class="page d-flex flex-row flex-column-fluid">
-			<!--어사이드 시작-->
-			<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true"
-				data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
-				data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-				data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
-				<!--브랜드 시작-->
-				<div class="aside-logo flex-column-auto" id="kt_aside_logo">
-					<a href="#">
-						<img alt="Logo" src="./assets/media/logos/logo-1-light.svg" class="h-25px logo" />
-					</a>
-					<!--어사이드 토글러-->
-					<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
-						data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
-						data-kt-toggle-name="aside-minimize">
-						<span class="svg-icon svg-icon-1 rotate-180">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<path opacity="0.5"
-									d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z"
-									fill="currentColor" />
-								<path
-									d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z"
-									fill="currentColor" />
-							</svg>
-						</span>
-					</div>
-				</div>
-				<!--브랜드 끝-->
-				<!--어사이드 메뉴 시작-->
-				<div class="aside-menu flex-column-fluid">
-					<!--어사이드 메뉴 시작 2-->
-					<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true"
-						data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
-						data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer"
-						data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
-						<!--메뉴 시작-->
-						<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
-							id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
-							<!--1.사원관리 시작-->
-							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-								<span class="menu-link">
-									<span class="menu-icon">
-										<span class="svg-icon svg-icon-2">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none">
-												<path
-													d="M20 14h-2v-4h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1Zm1 5v-2c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Zm0-12V5c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Z"
-													fill="currentColor" />
-												<path opacity=".3"
-													d="M17 22H3c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v18c0 .6-.4 1-1 1ZM10 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm3.3 9c.7 0 1.2-.7 1-1.3-.6-1.5-2.3-2.7-4.2-2.7-2 0-3.6 1.1-4.2 2.7-.3.6.3 1.3 1.5 1.3h5.9Z"
-													fill="currentColor" />
+		<div class="page d-flex flex-row flex-column-fluid flex-center">
+			<!--모달 시작-->
+			<div id="kt_modal_distribute" tabindex="-1" aria-hidden="true">
+				<!--begin::Modal dialog-->
+				<div class="modal-dialog modal-dialog-centered mw-900px">
+					<!--begin::Modal content-->
+					<div class="modal-content">
+						<!--begin::Form-->
+						<form class="form" action="#" id="kt_modal_add_customer_form">
+							<!--모달 헤더 시작-->
+							<div class="modal-header row" id="kt_modal_add_customer_header">
+								<h2 class="fw-bolder col-md-6">배당하기</h2>
+								<div class="col-md-6 text-end">
+									<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+										<span class="svg-icon svg-icon-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+												<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
 											</svg>
 										</span>
-									</span>
-									<span class="menu-title">사원관리</span>
-									<span class="menu-arrow"></span>
-								</span>
-
-								<div class="menu-sub menu-sub-accordion menu-active-bg">
-									<div class="menu-item">
-										<a class="menu-link" href="#">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">사원정보관리</span>
-										</a>
+									</div>
+								</div>
+								<div class="col-md-12 mt-4">
+									<div class="fs-5 fw-bold">총
+										<span class="text-primary fw-bolder">1,234건</span>의 내역에 사원을 배당합니다
 									</div>
 								</div>
 							</div>
-							<!--1.사원관리 끝-->
-							<!--2.배당관리 시작-->
-							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-								<span class="menu-link">
-									<span class="menu-icon">
-										<span class="svg-icon svg-icon-2">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none">
-												<path opacity=".3"
-													d="M10.96 12.913h7.9c.6 0 1.1.5 1 1.1-.6 5-5.4 8.7-10.6 7.7-3.6-.7-6.4-3.5-7.1-7.1-1-5.3 2.8-10 7.7-10.6.6-.1 1.1.4 1.1 1v7.9Z"
-													fill="currentColor" />
-												<path
-													d="M12.96 10.913v-7.9c0-.6.5-1.1 1.1-1 2 .2 3.8 1.1 5.2 2.6 1.4 1.4 2.3 3.3 2.6 5.2.1.6-.4 1.1-1 1.1h-7.9Z"
-													fill="currentColor" />
-											</svg>
-										</span>
-									</span>
-									<span class="menu-title">배당관리</span>
-									<span class="menu-arrow"></span>
-								</span>
-
-								<div class="menu-sub menu-sub-accordion menu-active-bg">
-									<div class="menu-item">
-										<a class="menu-link" href="#">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">배당현황</span>
-										</a>
-									</div>
-									<div class="menu-item">
-										<a class="menu-link" href="#">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">배당룰 관리</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<!--2.배당관리 끝-->
-							<!--3.상담관리 시작-->
-							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-								<span class="menu-link">
-									<span class="menu-icon">
-										<span class="svg-icon svg-icon-2">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none">
-												<path opacity=".3"
-													d="M8 8c0-.6.4-1 1-1h7V3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h2v2.1c0 .7.8 1 1.3.5L8 14.9V8Z"
-													fill="currentColor" />
-												<path
-													d="M22 8v10c0 .6-.4 1-1 1h-2v2.1c0 .7-.8 1-1.3.5L15 18.9H9c-.6 0-1-.4-1-1v-10c0-.6.4-1 1-1h12c.6.1 1 .5 1 1.1Zm-3 3c0-.6-.4-1-1-1h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1Zm-2 4c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1s.4 1 1 1h4c.6 0 1-.4 1-1Z"
-													fill="currentColor" />
-											</svg>
-										</span>
-									</span>
-									<span class="menu-title">상담관리</span>
-									<span class="menu-arrow"></span>
-								</span>
-
-								<div class="menu-sub menu-sub-accordion menu-active-bg">
-									<div class="menu-item">
-										<a class="menu-link" href="#">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">상담현황</span>
-										</a>
-									</div>
-									<div class="menu-item">
-										<a class="menu-link" href="#">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">상담일정</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<!--3.상담관리 끝-->
-							<!--4.계약관리 시작-->
-							<div class="menu-item menu-accordion">
-								<a class="menu-link" href="#ㄴ">
-									<span class="menu-icon">
-										<span class="svg-icon svg-icon-2">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none">
-												<path opacity=".3"
-													d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"
-													fill="currentColor" />
-												<path
-													d="m20 8-6-6v4a2 2 0 0 0 2 2h4ZM10.363 14.008 8.92 12.643a.897.897 0 1 0-1.233 1.302l2.537 2.404a1 1 0 0 0 1.376 0l4.711-4.463a.897.897 0 0 0-1.233-1.302l-3.616 3.424a.8.8 0 0 1-1.1 0Z"
-													fill="currentColor" />
-											</svg>
-										</span>
-									</span>
-									<span class="menu-title">계약관리</span>
-								</a>
-							</div>
-							<!--4.계약관리 끝-->
-							<!--5.통계 시작-->
-							<div class="menu-item menu-accordion">
-								<a class="menu-link" href="#">
-									<span class="menu-icon">
-										<span class="svg-icon svg-icon-2">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none">
-												<path opacity=".3"
-													d="M11 11h2c.6 0 1 .4 1 1v9h-4v-9c0-.6.4-1 1-1Zm5-8v18h4V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1Z"
-													fill="currentColor" />
-												<path
-													d="M21 20H8v-4c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v4H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1Z"
-													fill="currentColor" />
-											</svg>
-										</span>
-									</span>
-									<span class="menu-title">통계</span>
-								</a>
-							</div>
-							<!--5.통계 끝-->
-						</div>
-						<!--메뉴 끝-->
-					</div>
-					<!--어사이드 메뉴 끝 2-->
-				</div>
-				<!--어사이드 메뉴 끝-->
-			</div>
-			<!--어사이드 끝-->
-
-			<!--랩퍼 시작-->
-			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-				<!--헤더 시작-->
-				<div id="kt_header" style class="header align-items-stretch">
-					<!--컨테이너 시작-->
-					<div class="container-fluid d-flex align-items-stretch justify-content-between">
-						<!--랩퍼 시작 2-->
-						<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
-							<!--네브바 시작-->
-							<div class="d-flex align-items-stretch" id="kt_header_nav">
-								<!--메뉴 랩퍼 시작-->
-								<div class="header-menu align-items-stretch" data-kt-drawer="true"
-									data-kt-drawer-name="header-menu"
-									data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
-									data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-									data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle"
-									data-kt-swapper="true" data-kt-swapper-mode="prepend"
-									data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
-
-								</div>
-								<!--메뉴 랩퍼 끝-->
-							</div>
-							<!--네브바 끝-->
-
-							<!--툴바 랩퍼 시작-->
-							<div class="d-flex align-items-stretch flex-shrink-0">
-								<!--유저메뉴 시작-->
-								<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
-									<!--유저 정보 시작-->
-									<div class="d-flex flex-column px-3">
-										<div class="fw-bolder d-flex align-items-center fs-5">김마프
-											<span class="fw-bold text-muted fs-7 px-1">123456</span>
+							<!--모달 헤더 끝-->
+							<!--모달 바디 시작-->
+							<div class="modal-body scroll-y m-5">
+								<!--스텝퍼 시작-->
+								<div class="stepper stepper-links d-flex flex-column" id="kt_create_account_stepper">
+									<!--네브 시작-->
+									<div class="stepper-nav mb-10">
+										<!--begin::Step 1-->
+										<div class="stepper-item current" data-kt-stepper-element="nav">
+											<h3 class="stepper-title">1. 사원선택</h3>
 										</div>
-									</div>
-									<div class="cursor-pointer symbol symbol-30px symbol-md-40px"
-										data-kt-menu-trigger="click" data-kt-menu-attach="parent"
-										data-kt-menu-placement="bottom-end">
-										<img src="./assets/media/svg/avatars/blank.svg" alt="user" />
-									</div>
-									<!--유저 정보 끝-->
-									<!--유저 계정 메뉴 시작-->
-									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px"
-										data-kt-menu="true">
-										<div class="menu-item px-5">
-											<a href="../../demo1/dist/account/overview.html" class="menu-link px-5">비밀번호
-												변경</a>
+										<!--end::Step 1-->
+										<!--begin::Step 4-->
+										<div class="stepper-item" data-kt-stepper-element="nav">
+											<h3 class="stepper-title">2. 배당하기</h3>
 										</div>
-										<div class="menu-item px-5">
-											<a href="../../demo1/dist/authentication/flows/basic/sign-in.html"
-												class="menu-link px-5">로그아웃</a>
+										<!--end::Step 4-->
+										<!--begin::Step 5-->
+										<div class="stepper-item" data-kt-stepper-element="nav">
+											<h3 class="stepper-title">3. 배당완료</h3>
 										</div>
+										<!--end::Step 5-->
 									</div>
-									<!--유저 계정 메뉴 끝-->
-								</div>
-								<!--유저메뉴 끝-->
-							</div>
-							<!--툴바 랩퍼 끝-->
-						</div>
-						<!--랩퍼 끝 2-->
-					</div>
-					<!--컨테이너 끝-->
-				</div>
-				<!--헤더 끝-->
+									<!--네브 끝-->
 
-				<!--콘텐트 시작-->
-				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-					<!--툴바 시작-->
-					<div class="toolbar" id="kt_toolbar">
-						<!--컨테이너 시작-->
-						<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
-							<!--페이지 타이틀 시작-->
-							<div data-kt-swapper="true" data-kt-swapper-mode="prepend"
-								data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
-								class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-								<h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">배당관리</h1>
-								<span class="h-20px border-gray-300 border-start mx-4"></span>
-								<!--사이트이동경로 시작-->
-								<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
-									<li class="breadcrumb-item text-muted">
-										<a href="IAS.html" class="text-muted text-hover-primary">홈</a>
-									</li>
-									<li class="breadcrumb-item">
-										<span class="bullet bg-gray-300 w-5px h-1px"></span>
-									</li>
-									<li class="breadcrumb-item text-muted">배당관리</li>
-									<li class="breadcrumb-item">
-										<span class="bullet bg-gray-300 w-5px h-1px"></span>
-									</li>
-									<li class="breadcrumb-item text-dark">배당현황</li>
-								</ul>
-								<!--사이트이동경로 끝-->
-							</div>
-							<!--페이지 타이틀 끝-->
-						</div>
-						<!--컨테이너 끝-->
-					</div>
-					<!--툴바 끝-->
+									<!--화면 시작-->
+									<form class="stepper-item" novalidate="novalidate" id="kt_modal_offer_a_deal_form">
 
-					<!--모달 시작-->
-					<div id="kt_modal_distribute" tabindex="-1" aria-hidden="true">
-						<!--begin::Modal dialog-->
-						<div class="modal-dialog modal-dialog-centered mw-900px">
-							<!--begin::Modal content-->
-							<div class="modal-content">
-								<!--begin::Form-->
-								<form class="form" action="#" id="kt_modal_add_customer_form">
-									<!--모달 헤더 시작-->
-									<div class="modal-header row" id="kt_modal_add_customer_header">
-										<h2 class="fw-bolder col-md-6">배당하기</h2>
-										<div class="col-md-6 text-end">
-											<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
-												<span class="svg-icon svg-icon-1">
+										<!--스텝2 화면 시작-->
+										<div data-kt-stepper-element="content" class="pending">
+											<div class="w-100 d-flex flex-column min-h-550px">
+												<div class="table-responsive">
+													<table class="table table-rounded border scrolltbody gy-5 gs-3 mb-6 overflow-hidden">
+														<thead class="table-active d-flex text-center table-row-bordered">
+															<tr class="fw-bold fs-5 text-dark border-gray-200">
+																<th class="border-end" style="width: 80px;">No</th> 
+																<th class="border-end" style="width: 150px;">사원번호</th> 
+																<th class="border-end" style="width: 150px;">사원명</th>
+																<th class="border-end" style="width: 120px;">선호보험연령</th>
+																<th style="width: 315px;">최대배당건수</th>
+															</tr>
+														</thead>
+														<tbody class="fw-bold fs-5 text-gray-800">
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">1</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">2</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">3</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">4</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">5</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr>
+															<!--리스트 추가 5-->
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">6</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">7</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">8</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">9</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr> 
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">10</td>
+																<td class="border-end">2200001</td>
+																<td class="border-end">김보험</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr>
+															<tr class="align-middle text-center border-bottom">
+																<td class="border-end">test</td>
+																<td class="border-end">test</td>
+																<td class="border-end">test</td>
+																<td class="border-end">0 ~ 99</td>
+																<td class="d-flex flex-center">
+																	<!--begin::Dialer-->
+																	<div class="position-relative w-md-225px"
+																		data-kt-dialer="true"
+																		data-kt-dialer-min="5"
+																		data-kt-dialer-max="999"
+																		data-kt-dialer-step="1"
+																		data-kt-dialer-prefix=""
+																		data-kt-dialer-decimals="">
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+
+																		<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
+
+																		<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+																			<span class="svg-icon svg-icon-1">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+																					<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+																					<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+																				</svg>
+																			</span>
+																		</button>
+																	</div>
+																	<!--end::Dialer-->
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!--스텝2 화면 끝-->
+										<!--버튼 액션 시작-->
+										<div class="d-flex flex-stack">
+											<!--begin::Wrapper-->
+											<div class="mr-2">
+												<button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
+												<span class="svg-icon svg-icon-4 me-1">
 													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
-														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+														<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1" fill="currentColor" />
+														<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="currentColor" />
 													</svg>
 												</span>
+													이전
+												</button>
+												<button type="button" class="btn btn-lg btn-secondary" data-kt-stepper-action="exit">닫기</button>
 											</div>
-										</div>
-										<div class="col-md-12 mt-4">
-											<div class="fs-5 fw-bold">총
-												<span class="text-primary fw-bolder">1,234건</span>의 내역에 사원을 배당합니다
-											</div>
-										</div>
-									</div>
-									<!--모달 헤더 끝-->
-									<!--모달 바디 시작-->
-									<div class="modal-body scroll-y m-5">
-										<!--스텝퍼 시작-->
-										<div class="stepper stepper-links d-flex flex-column" id="kt_create_account_stepper">
-											<!--네브 시작-->
-											<div class="stepper-nav mb-10">
-												<!--begin::Step 1-->
-												<div class="stepper-item current" data-kt-stepper-element="nav">
-													<h3 class="stepper-title">1. 사원선택</h3>
-												</div>
-												<!--end::Step 1-->
-												<!--begin::Step 4-->
-												<div class="stepper-item" data-kt-stepper-element="nav">
-													<h3 class="stepper-title">2. 배당하기</h3>
-												</div>
-												<!--end::Step 4-->
-												<!--begin::Step 5-->
-												<div class="stepper-item" data-kt-stepper-element="nav">
-													<h3 class="stepper-title">3. 배당완료</h3>
-												</div>
-												<!--end::Step 5-->
-											</div>
-											<!--네브 끝-->
-
-											<!--화면 시작-->
-											<form class="stepper-item" novalidate="novalidate" id="kt_modal_offer_a_deal_form">
-
-												<!--스텝2 화면 시작-->
-												<div data-kt-stepper-element="content" class="pending">
-													<div class="w-100 d-flex flex-column min-h-550px">
-														<div class="table-responsive">
-															<table class="table table-rounded border scrolltbody gy-5 gs-3 mb-6 overflow-hidden">
-																<thead class="table-active d-flex text-center table-row-bordered">
-																	<tr class="fw-bold fs-5 text-dark border-gray-200">
-																		<th class="border-end" style="width: 80px;">No</th> 
-																		<th class="border-end" style="width: 150px;">사원번호</th> 
-																		<th class="border-end" style="width: 150px;">사원명</th>
-																		<th class="border-end" style="width: 120px;">선호보험연령</th>
-																		<th style="width: 315px;">최대배당건수</th>
-																	</tr>
-																</thead>
-																<tbody class="fw-bold fs-5 text-gray-800">
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">1</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">2</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">3</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">4</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">5</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr>
-																	<!--리스트 추가 5-->
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">6</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">7</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">8</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">9</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr> 
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">10</td>
-																		<td class="border-end">2200001</td>
-																		<td class="border-end">김보험</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr>
-																	<tr class="align-middle text-center border-bottom">
-																		<td class="border-end">test</td>
-																		<td class="border-end">test</td>
-																		<td class="border-end">test</td>
-																		<td class="border-end">0 ~ 99</td>
-																		<td class="d-flex flex-center">
-																			<!--begin::Dialer-->
-																			<div class="position-relative w-md-225px"
-																				data-kt-dialer="true"
-																				data-kt-dialer-min="5"
-																				data-kt-dialer-max="999"
-																				data-kt-dialer-step="1"
-																				data-kt-dialer-prefix=""
-																				data-kt-dialer-decimals="">
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-
-																				<input type="text" class="form-control text-center" data-kt-dialer-control="input" placeholder="배당건수" name="manageBudget" value="5" />
-
-																				<button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
-																					<span class="svg-icon svg-icon-1">
-																						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																							<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
-																							<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
-																							<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
-																						</svg>
-																					</span>
-																				</button>
-																			</div>
-																			<!--end::Dialer-->
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</div>
-													</div>
-												</div>
-												<!--스텝2 화면 끝-->
-												<!--버튼 액션 시작-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="mr-2">
-														<button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
-														<span class="svg-icon svg-icon-4 me-1">
+											<!--end::Wrapper-->
+											<!--begin::Wrapper-->
+											<div>
+												<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
+													<span class="indicator-label">배당하기
+														<span class="svg-icon svg-icon-3 ms-2 me-0">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1" fill="currentColor" />
-																<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="currentColor" />
+																<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+																<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
 															</svg>
 														</span>
-															이전
-														</button>
-														<button type="button" class="btn btn-lg btn-secondary" data-kt-stepper-action="exit">닫기</button>
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Wrapper-->
-													<div>
-														<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
-															<span class="indicator-label">배당하기
-																<span class="svg-icon svg-icon-3 ms-2 me-0">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-																		<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-																	</svg>
-																</span>
-															</span>
-															<span class="indicator-progress">배당 중
-															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-														</button>
-														<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next" onclick="nextPage(event)">다음
-															<span class="svg-icon svg-icon-4 ms-1 me-0">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-																</svg>
-															</span>
-														</button>
-													</div>
-													<!--end::Wrapper-->
-												</div>
-												<!--버튼 액션 끝-->
-											</form>
-											<!--화면 끝-->
+													</span>
+													<span class="indicator-progress">배당 중
+													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+												</button>
+												<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next" onclick="nextPage(event)">다음
+													<span class="svg-icon svg-icon-4 ms-1 me-0">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+															<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+														</svg>
+													</span>
+												</button>
+											</div>
+											<!--end::Wrapper-->
 										</div>
-										<!--스텝퍼 끝-->
-									</div>
-									<!--모달 바디 끝-->
-
-								</form>
-								<!--end::Form-->
+										<!--버튼 액션 끝-->
+									</form>
+									<!--화면 끝-->
+								</div>
+								<!--스텝퍼 끝-->
 							</div>
-							<!--end::Modal content-->
-						</div>
-						<!--end::Modal dialog-->
-					</div>
-					<!--모달 끝-->
+							<!--모달 바디 끝-->
 
-				</div>
-				<!--콘텐트 끝-->
-				<!--푸터 시작-->
-				<div class="footer py-3 d-flex flex-lg-column" id="kt_footer">
-					<!--begin::Container-->
-					<div
-						class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
-						<div class="text-dark order-2 order-md-1">
-							<span class="text-muted fw-bold me-1">2022©</span>
-							<span class="text-gray-800">Microprotect Insucore IAS</span>
-						</div>
+						</form>
+						<!--end::Form-->
 					</div>
-					<!--end::Container-->
+					<!--end::Modal content-->
 				</div>
-				<!--푸터 끝-->
+				<!--end::Modal dialog-->
 			</div>
-			<!--랩퍼 끝-->
+			<!--모달 끝-->
 		</div>
 		<!--페이지 끝-->
 	</div>
