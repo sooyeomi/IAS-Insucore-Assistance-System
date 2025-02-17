@@ -1,2021 +1,2235 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!--begin::Head-->
-<head>
-	<base href="">
-	<title>Microprotect Insucore IAS</title>
-	<meta charset="utf-8" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta property="og:locale" content="" />
-	<meta property="og:type" content="" />
-	<meta property="og:title" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<link rel="canonical" href="" />
-	<link rel="shortcut icon" href="assets/media/logos/favicon-2.ico" />
-	<!--begin::Fonts-->
-	<script>
-		(function (d) {
-			var config = {
+	<!--begin::Head-->
+	<head><base href="">
+		<title>Microprotect Insucore IAS</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="" />
+		<link rel="canonical" href="" />
+		<link rel="shortcut icon" href="assets/media/logos/favicon-2.ico" />
+		<!--begin::Fonts-->
+		<script>
+			(function(d) {
+				var config = {
 					kitId: 'bxk2thj',
 					scriptTimeout: 3000,
 					async: true
 				},
-				h = d.documentElement,
-				t = setTimeout(function () {
-					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-				}, config.scriptTimeout),
-				tk = d.createElement("script"),
-				f = false,
-				s = d.getElementsByTagName("script")[0],
-				a;
-			h.className += " wf-loading";
-			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-			tk.async = true;
-			tk.onload = tk.onreadystatechange = function () {
-				a = this.readyState;
-				if (f || a && a != "complete" && a != "loaded") return;
-				f = true;
-				clearTimeout(t);
-				try {
-					Typekit.load(config)
-				} catch (e) {}
-			};
-			s.parentNode.insertBefore(tk, s)
-		})(document);
-	</script>
-	<!--end::Fonts-->
-	<!--begin::Page Vendor Stylesheets(used by this page)-->
-	<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-	<!--end::Page Vendor Stylesheets-->
-	<!--begin::Global Stylesheets Bundle(used by all pages)-->
-	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-	<!--end::Global Stylesheets Bundle-->
-</head>
-<!--end::Head-->
-<!--begin::Body-->
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+		<!--end::Fonts-->
+		<!--begin::Page Vendor Stylesheets(used by this page)-->
+		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendor Stylesheets-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:40px;--kt-toolbar-height-tablet-and-mobile:40px" data-kt-aside-minimize="on">
+		<!--루트 시작-->
+		<div class="d-flex flex-column flex-root">
+			<!--페이지 시작-->
+			<div class="page d-flex flex-row flex-column-fluid">
+				<!--어사이드 시작-->
+				<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+					<!--브랜드 시작-->
+					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+						<a href="#">
+							<img alt="Logo" src="./assets/media/logos/logo-1-light.svg" class="h-25px logo" />
+						</a>
+						<!--어사이드 토글러-->
+						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+							<span class="svg-icon svg-icon-1 rotate-180">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor" />
+									<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor" />
+								</svg>
+							</span>
+						</div>
+					</div>
+					<!--브랜드 끝-->
+					<!--어사이드 메뉴 시작-->
+					<div class="aside-menu flex-column-fluid">
+						<!--어사이드 메뉴 시작 2-->
+						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+							<!--메뉴 시작-->
+							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
+								<!--1.사원관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M20 14h-2v-4h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1Zm1 5v-2c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Zm0-12V5c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Z" fill="currentColor"/>
+													<path opacity=".3" d="M17 22H3c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v18c0 .6-.4 1-1 1ZM10 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm3.3 9c.7 0 1.2-.7 1-1.3-.6-1.5-2.3-2.7-4.2-2.7-2 0-3.6 1.1-4.2 2.7-.3.6.3 1.3 1.5 1.3h5.9Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">사원관리</span>
+										<span class="menu-arrow"></span>
+									</span>
 
-<body id="kt_body" class="">
-	<!--루트 시작-->
-	<div class="d-flex flex-column flex-root">
-		<!--페이지 시작-->
-		<div class="page d-flex flex-row flex-column-fluid">
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="4-1-employee-search.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">사원정보관리</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--1.사원관리 끝-->
+								<!--2.배당관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M10.96 12.913h7.9c.6 0 1.1.5 1 1.1-.6 5-5.4 8.7-10.6 7.7-3.6-.7-6.4-3.5-7.1-7.1-1-5.3 2.8-10 7.7-10.6.6-.1 1.1.4 1.1 1v7.9Z" fill="currentColor"/>
+													<path d="M12.96 10.913v-7.9c0-.6.5-1.1 1.1-1 2 .2 3.8 1.1 5.2 2.6 1.4 1.4 2.3 3.3 2.6 5.2.1.6-.4 1.1-1 1.1h-7.9Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">배당관리</span>
+										<span class="menu-arrow"></span>
+									</span>
 
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="6-1-manage-distribution.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">배당현황</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="6-7-manage-distribute-rule.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">배당룰 관리</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--2.배당관리 끝-->
+								<!--3.상담관리 시작-->
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M8 8c0-.6.4-1 1-1h7V3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1h2v2.1c0 .7.8 1 1.3.5L8 14.9V8Z" fill="currentColor"/>
+													<path d="M22 8v10c0 .6-.4 1-1 1h-2v2.1c0 .7-.8 1-1.3.5L15 18.9H9c-.6 0-1-.4-1-1v-10c0-.6.4-1 1-1h12c.6.1 1 .5 1 1.1Zm-3 3c0-.6-.4-1-1-1h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1Zm-2 4c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1s.4 1 1 1h4c.6 0 1-.4 1-1Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">상담관리</span>
+										<span class="menu-arrow"></span>
+									</span>
 
-			<!--랩퍼 시작-->
-			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="7-1-counsel-condition.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">상담현황</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="8-1-calendar.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">상담일정</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--3.상담관리 끝-->
+								<!--4.계약관리 시작-->
+								<div class="d-none menu-item menu-accordion">
+									<a class="menu-link" href="#">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" fill="currentColor"/>
+													<path d="m20 8-6-6v4a2 2 0 0 0 2 2h4ZM10.363 14.008 8.92 12.643a.897.897 0 1 0-1.233 1.302l2.537 2.404a1 1 0 0 0 1.376 0l4.711-4.463a.897.897 0 0 0-1.233-1.302l-3.616 3.424a.8.8 0 0 1-1.1 0Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">계약관리</span>
+									</a>
+								</div>
+								<!--4.계약관리 끝-->
+								<!--5.통계 시작-->
+								<div class="d-none menu-item menu-accordion">
+									<a class="menu-link" href="#">
+										<span class="menu-icon">
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity=".3" d="M11 11h2c.6 0 1 .4 1 1v9h-4v-9c0-.6.4-1 1-1Zm5-8v18h4V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1Z" fill="currentColor"/>
+													<path d="M21 20H8v-4c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v4H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1s-.4-1-1-1Z" fill="currentColor"/>
+												</svg>
+											</span>
+										</span>
+										<span class="menu-title">통계</span>
+									</a>
+								</div>
+								<!--5.통계 끝-->
+							</div>
+							<!--메뉴 끝-->
+						</div>
+						<!--어사이드 메뉴 끝 2-->
+					</div>
+					<!--어사이드 메뉴 끝-->
+				</div>
+				<!--어사이드 끝-->
 
-
-				<!--콘텐트 시작-->
-				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-
-					<!--포스트 시작-->
-					<div class="post d-flex flex-column-fluid" id="kt_post">
+				<!--랩퍼 시작-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+					<!--헤더 시작-->
+					<div id="kt_header" style class="header align-items-stretch">
 						<!--컨테이너 시작-->
-						<div id="kt_content_container" class="container-fluid">
-							<!--카드 시작-->
-							<div class="card mb-5">
-								<!--카드 바디 시작-->
-								<div class="card-body">
-									<table class="w-100">
-										<tbody>
-											<tr>
-												<td rowspan="2">
-													<h1 class="text-center m-0">최고객</h1>
-												</td>
-												<td>
-													<span class="fw-bolder me-3">생년월일</span>
-													1987-06-05
-												</td>
-												<td>
-													<span class="fw-bolder me-3">만연령</span>
-													36
-												</td>
-												<td>
-													<span class="fw-bolder me-3">상령일</span>
-													12월 5일
-												</td>
-												<td rowspan="2" class="w-150px">
-													<button type="button" href="#"
-														class="btn btn-primary">
-														<span class="svg-icon svg-icon-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24"
-																height="24" viewBox="0 0 24 24" fill="none">
-																<rect opacity="0.5" x="11.364" y="20.364" width="16"
-																	height="2" rx="1"
-																	transform="rotate(-90 11.364 20.364)"
-																	fill="currentColor" />
-																<rect x="4.36396" y="11.364" width="16" height="2"
-																	rx="1" fill="currentColor" />
-															</svg>
-														</span>
-														PDF다운로드
-													</button></td>
-											</tr>
-											<tr>
-												<td>
-													<span class="fw-bolder me-3">성별</span>
-													<span class="badge badge-light-danger">여</span>
-												</td>
-												<td>
-													<span class="fw-bolder me-3">보험연령</span>
-													36
-												</td>
-												<td>보험료 오르는 날까지 <span class="badge badge-light-primary">123</span>일 남음
-												</td>
-											</tr>
-										</tbody>
-									</table>
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--랩퍼 시작 2-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+								<!--네브바 시작-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav">
+									<!--메뉴 랩퍼 시작-->
+									<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+
+									</div>
+									<!--메뉴 랩퍼 끝-->
 								</div>
-								<!--카드 바디 끝-->
-							</div>
-							<!--카드 끝-->
-							<div class="d-flex align-items-center bg-light-success rounded p-5 mb-7">
-								<div class="flex-grow-1 me-2">
-									<p class="mb-1"><span class="fw-bolder text-primary me-1">2022.05.11</span>보험 가입 상태를
-										기준으로 분석한 자료입니다. 기준일자 이후 보험계약의 변동사항은 반영되지 않았을 수 있습니다. (분석일: 2022-05-27)</p>
-									<p class="mb-1">보험료 합계 금액은 매월납, 년납의 월납 금액 기준이며, 그 외 납기방식은 합계에서 제외됩니다.</p>
-									<p class="mb-1">단체보험은 보험료 합계 금액에서 제외됩니다.</p>
-									<p class="mb-1">보장분석은 보험에 대한 이해를 돕고 중복가입 등의 확인을 위해 제공되는 서비스로 보험금 지급의 근거가 될 수 없습니다.
-										자세한 사항은 해당 보험의 약관 및 증권을 참조하시기 바랍니다.</p>
+								<!--네브바 끝-->
+
+								<!--툴바 랩퍼 시작-->
+								<div class="d-flex align-items-stretch flex-shrink-0">
+									<!--유저메뉴 시작-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+										<!--유저 정보 시작-->
+										<div class="d-flex flex-column px-3">
+											<div class="fw-bolder d-flex align-items-center fs-5">김마프
+												<span class="fw-bold text-muted fs-7 px-1">123456</span>
+											</div>
+										</div>
+										<div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+											<img src="./assets/media/svg/avatars/blank.svg" alt="user" />
+										</div>
+										<!--유저 정보 끝-->
+										<!--유저 계정 메뉴 시작-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
+											<div class="menu-item px-5">
+												<a href="3-1-new-password.html" class="menu-link px-5">비밀번호 변경</a>
+											</div>
+											<div class="menu-item px-5">
+												<a href="2-home.html" class="menu-link px-5">로그아웃</a>
+											</div>
+										</div>
+										<!--유저 계정 메뉴 끝-->
+									</div>
+									<!--유저메뉴 끝-->
 								</div>
+								<!--툴바 랩퍼 끝-->
 							</div>
-							<div id="kt_project_users_table_pane" class="tab-pane fade active show mb-10">
+							<!--랩퍼 끝 2-->
+						</div>
+						<!--컨테이너 끝-->
+					</div>
+					<!--헤더 끝-->
+
+					<!--콘텐트 시작-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<!--툴바 시작-->
+						<div class="toolbar" id="kt_toolbar">
+							<!--컨테이너 시작-->
+							<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+								<!--페이지 타이틀 시작-->
+								<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+									<h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">배당관리</h1>
+									<span class="h-20px border-gray-300 border-start mx-4"></span>
+									<!--사이트이동경로 시작-->
+									<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+										<li class="breadcrumb-item text-muted">
+											<a href="2-home.html" class="text-muted text-hover-primary">홈</a>
+										</li>
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-300 w-5px h-1px"></span>
+										</li>
+										<li class="breadcrumb-item text-muted">상담관리</li>
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-300 w-5px h-1px"></span>
+										</li>
+										<li class="breadcrumb-item text-muted">상담현황</li>
+										<li class="breadcrumb-item">
+											<span class="bullet bg-gray-300 w-5px h-1px"></span>
+										</li>
+										<li class="breadcrumb-item text-dark">보장분석</li>
+									</ul>
+									<!--사이트이동경로 끝-->
+								</div>
+								<!--페이지 타이틀 끝-->
+							</div>
+							<!--컨테이너 끝-->
+						</div>
+						<!--툴바 끝-->
+
+						<!--포스트 시작-->
+						<div class="post d-flex flex-column-fluid" id="kt_post">
+							<!--컨테이너 시작-->
+							<div id="kt_content_container" class="container-fluid">
 								<!--카드 시작-->
-								<div class="card card-flush">
+								<div class="card mb-5">
 									<!--카드 바디 시작-->
 									<div class="card-body">
-										<ul class="nav nav-tabs nav-line-tabs mb-5 fs-6">
-											<li class="nav-item">
-												<a class="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">보험
-													가입 현황</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_2">주요특약별 보장
-													현황</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_3">생애주기별
-													보장현황</a>
-											</li>
-										</ul>
-
-										<div class="tab-content" id="myTabContent">
-											<!-- begin:: 보험 가입 현황 -->
-											<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
-												<div class="row">
-													<div class="col-6">
-														<div class="bg-light-primary rounded p-5">
-															<div class="flex-grow-1 me-2">
-																<p class="mb-1 d-flex justify-content-between">
-																	<span>정상계약</span>
-																	<span class="fw-bolder ">6건</span>
-																</p>
-																<p class="mb-1 d-flex justify-content-between">&nbsp;
-																</p>
-																<p class="mb-1 d-flex justify-content-between">
-																	<span>월 납입 보험료</span>
-																	<span class="fw-bolder text-primary ">1,000,000
-																		원</span>
-																</p>
-
-															</div>
-														</div>
-													</div>
-													<div class="col-6">
-
-														<div class="bg-light-primary rounded p-5 ">
-															<div class="flex-grow-1 me-2">
-																<p class="mb-1 d-flex justify-content-between">
-																	<span>총 보험료 합계</span>
-																	<span class="fw-bolder ">33,936,000 원</span>
-																</p>
-																<p class="mb-1 d-flex justify-content-between">
-																	<span>납입완료 보험료 합계
-																	</span>
-																	<span class=" ">18,140,000 원
-																	</span>
-																</p>
-																<p class="mb-1 d-flex justify-content-between">
-																	<span>납입예정 보험료 합계 </span>
-																	<span class="fw-bolder text-primary ">15,796,000 원
-																	</span>
-																</p>
-
-															</div>
-														</div>
-
-													</div>
-												</div>
-												<table
-													class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-													<thead class="fs-7 fw-bolder">
-														<tr>
-															<th class="min-w-250px text-start"" style=" width:30%">상품명</th>
-															<th>피보험자 <br />(계약자)</th>
-															<th>보장기간</th>
-															<th>납입기간</th>
-															<th>납입횟수</th>
-															<th>납입 보험료</th>
-															<th class="min-w-250px">총 보험료</th>
-														</tr>
-													</thead>
-													<tbody class="">
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">메리츠화재</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6">(무)메리츠
-																	케어프리보험 생활케어프리</p>
-															</td>
-															<td>최고객</td>
-															<td>2012.05.22 ~ 2042.05.22</td>
-															<td>30년</td>
-															<td>120/360</td>
-															<td>
-																<p class="mb-1">매월납</p>
-																<p class="mb-1">50,000 원</p>
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">18,000,000 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">6,000,000 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">12,000,000
-																			원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">교보라이프플래닛</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6">노후생활지킴이</p>
-															</td>
-															<td>최고객</td>
-															<td>2015.05.30 ~ 2045.05.30
-															</td>
-															<td>30년</td>
-															<td>4/30</td>
-															<td>
-																<p class="mb-1">년납</p>
-																<p class="mb-1">500,000 원</p>
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">12,000,000 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">84,000,000 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">3,600,000
-																			원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">KB손해보험
-																</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6">LIG생활보장보험
-																</p>
-															</td>
-															<td>최고객<p>(최아빠)</p>
-															</td>
-															<td>2012.05.22 ~ 2042.05.22
-
-															</td>
-															<td>일시납
-															</td>
-															<td>1/1</td>
-															<td>
-																<p class="mb-1">일시납</p>
-																<p class="mb-1">3,600,000 원</p>
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">3,600,000 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">3,600,000 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">0 원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">모두손해보험</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6">이거저거일부만보장보험
-																</p>
-															</td>
-															<td>최고객</td>
-															<td>2015.05.30 ~ 2045.05.30
-															</td>
-															<td> <span class="text-danger">교보문의중</span></td>
-															<td> <span class="text-danger">교보문의중</span></td>
-															<td>
-																<p class="mb-1">기타</p>
-																<p class="mb-1">123,000 원</p>
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">12,000,000 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">84,000,000 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">3,600,000
-																			원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">
-																이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명
-																</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6"><span
-																		class="badge badge-primary me-1">실손</span>상품명
-																	길어져도 줄바꿈해서 다 출력 이거저거의료비실손보험품명 길어져도 줄바꿈해서 다 출력
-																	이거저거의료비실손보험품명 길어져도 줄바꿈해서 다 출력 이거저거의료비실손보험품명 길어져도
-																	줄바꿈해서 다 출력 이거저거의료비실손보험
-																</p>
-															</td>
-															<td>최고객</td>
-															<td>2015.05.30 ~ 2045.05.30
-															</td>
-															<td>1년</td>
-															<td>4/30</td>
-															<td>
-																<p class="mb-1">매월납</p>
-																<p class="mb-1">500,000 원</p>
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">12,000,000 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">84,000,000 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">3,600,000
-																			원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-														<tr>
-															<td class="text-start"">
-																<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">기업사랑보험</p>
-																<p class="text-gray-800 fw-bolder mb-1 fs-6"><span
-																		class="badge badge-success me-1">단체</span>노후생활지킴이
-																</p>
-															</td>
-															<td>최고객<p>(대감컴퍼니)</p>
-															</td>
-															<td>2015.05.30 ~ 2045.05.30
-															</td>
-															<td>-</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																<div class="flex-grow-1 me-2">
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>총 보험료</span>
-																		<span class="fw-bolder ">- 원</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입완료 보험료
-																		</span>
-																		<span class=" ">- 원
-																		</span>
-																	</p>
-																	<p class="mb-1 d-flex justify-content-between">
-																		<span>납입예정 보험료 </span>
-																		<span class="fw-bolder text-primary ">- 원
-																		</span>
-																	</p>
-																</div>
-															</td>
-														</tr>
-
-													</tbody>
-												</table>
-											</div>
-											<!-- end:: 보험 가입 현황 -->
-											<!-- begin:: 주요특약별 보장 현황 -->
-											<div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel" style="overflow: auto; height:100vh">
-												<style>
-													.sticky-top{
-														position: sticky;
-														top: 0;
-														z-index: 1;
-													}
-													.sticky-left {
-														position: sticky;
-														left: 0;
-													}
-
-													table#sticky-table th.table-active{
-														background-color: #F5F8FA
-													}
-													table#sticky-table td,table#sticky-table th  {
-														background-color: white;
-													}
-                                                    table#sticky-table table td {
-                                                        background-color: transparent;
-                                                    }
-												</style>
-												<table id="sticky-table"
-													class="table table-hover table-rounded border table-row-bordered  gs-3 mt-4 text-center align-middle">
-													<thead class="fs-7  align-middle sticky-top">
-														<tr>
-															<th colspan="4" rowspan="5" class="p-0 sticky-left">
-																<table>
-																	<thead>
-																		<tr>
-																			<th class="table-active min-w-200px fw-bolder" colspan="2" rowspan="4"
-																			style="width:20%">보험가입정보
-																			</th>
-																			<th class="min-w-200px table-active fw-bolder h-40px" 	colspan="2">보장기간</th>
-																		</tr>
-																		<tr>
-																			<th class="table-active fw-bolder h-40px" colspan="2">보험사</th>
-
-																		</tr>
-																		<tr>
-																			<th class="table-active fw-bolder h-60px" colspan="2">보험상품명</th>
-
-																		</tr>
-																		<tr>
-																			<th class="table-active fw-bolder h-40px">월 보험료 <br />합계</th>
-															<th>999,999원
-															</th>
-																		</tr>
-																		<tr>
-																			<th class="table-active fw-bolder" colspan="2">주요 특약</th>
-															<th class="table-active fw-bolder h-40px">가입금액<br />합계
-															</th>
-															<th class="table-active fw-bolder h-40px">적정여부
-															</th>
-																		</tr>
-																		
-																	</thead>
-																</table>
-
-															</th>
-															
-															<th class="min-w-200px h-40px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-															<th class="min-w-200px">2022.05~2060.05
-															</th>
-														</tr>
-														<tr>
-															<th class="h-40px">메리츠화재</th>
-															<th>교보라이프플래닛생명
-															</th>
-															<th>KB손해보험
-
-															</th>
-															<th>메리츠화재
-															</th>
-															<th>메리츠화재
-															</th>
-															<th>메리츠화재
-															</th>
-															<th>메리츠화재
-															</th>
-															<th>메리츠화재
-															</th>
-															<th>메리츠화재
-															</th>
-														</tr>
-														<tr>
-															<th class="h-60px"><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리</span>
-															</th>
-															<th><span class="ellipsis2">노후생활지킴이</span>
-															</th>
-															<th><span class="ellipsis2">LIG생활보장보험</span>
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-															</th>
-															<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
-															</th>
-														</tr>
-														<tr>
-															
-															<th class="h-40px">매월납 50,000 원
-															</th>
-															<th>분기납 100,000 원
-
-
-															</th>
-															<th>일시납 3,600,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-															<th>매월납 50,000원
-
-															</th>
-														</tr>
-														<tr>
-															
-															<th class="table-active fw-bolder h-40px">1
-
-
-															</th>
-															<th class="table-active fw-bolder">2
-
-															</th>
-															<th class="table-active fw-bolder">3
-
-															</th>
-															<th class="table-active fw-bolder">4
-
-															</th>
-															<th class="table-active fw-bolder">5
-
-															</th>
-															<th class="table-active fw-bolder">6
-
-															</th>
-															<th class="table-active fw-bolder">7
-
-															</th>
-															<th class="table-active fw-bolder">8
-
-															</th>
-															<th class="table-active fw-bolder">9
-
-															</th>
-														</tr>
-													</thead>
-													<tbody class="">
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-success"><i
-																						class="fas fa-check me-1 text-white"></i>충분</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-warning"><i
-																				class="fas fa-chart-pie me-1 text-white"></i>부족</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															<td>-</td>
-															<td>
-																-
-															</td>
-															<td>
-																1,000
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-														<tr>
-															<td colspan="4" class="sticky-left ">
-																<table class="w-100">
-																	<tbody>
-																		<tr>
-																			<td class="text-start">
-																				보장 구분
-																			</td>
-																			<td class="text-start">담보명</td>
-																			<td>3,000</td>
-																			<td><span class="badge badge-danger"><i
-																				class="fas fa-ban me-1 text-white"></i>없음</span>
-																	</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</td>
-															
-															<td>1,000</td>
-															<td>
-																2,000
-															</td>
-															<td>
-																-
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-															<td>
-															</td>
-														</tr>
-
-
-													</tbody>
-												</table>
-											</div>
-											<!-- end:: 주요특약별 보장 현황 -->
-											<!-- begin:: 생애주기별 보장현황 -->
-
-											<div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel">
-												<!--begin::Accordion-->
-												<div class="accordion" id="kt_accordion_1">
-													<div class="accordion-item">
-														<h2 class="accordion-header" id="kt_accordion_1_header_1">
-															<button class="accordion-button fs-4 fw-bold collapsed"
-																type="button" data-bs-toggle="collapse"
-																data-bs-target="#kt_accordion_1_body_1"
-																aria-expanded="false"
-																aria-controls="kt_accordion_1_body_1">
-																<div
-																	class="d-flex justify-content-between align-items-center w-100">
-																	<span>2대 질환</span>
-																	<div class="me-6">
-																		<span class="me-3">36세 현재</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
-																			3</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
-																			1</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-danger">없음
-																			1</span>
-																	</div>
-
-																</div>
-															</button>
-														</h2>
-														<div id="kt_accordion_1_body_1"
-															class="accordion-collapse collapse"
-															aria-labelledby="kt_accordion_1_header_1"
-															data-bs-parent="#kt_accordion_1">
-															<div class="accordion-body">
-																<h3>암진단</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<h3>고액암</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<h3>유사암</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
-														</div>
-													</div>
-
-													<div class="accordion-item">
-														<h2 class="accordion-header" id="kt_accordion_1_header_2">
-															<button class="accordion-button fs-4 fw-bold collapsed"
-																type="button" data-bs-toggle="collapse"
-																data-bs-target="#kt_accordion_1_body_2"
-																aria-expanded="false"
-																aria-controls="kt_accordion_1_body_2">
-																<div
-																	class="d-flex justify-content-between align-items-center w-100">
-																	<span>암</span>
-																	<div class="me-6">
-																		<span class="me-3">36세 현재</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
-																			3</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
-																			1</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-danger">없음
-																			1</span>
-																	</div>
-
-																</div>
-															</button>
-														</h2>
-														<div id="kt_accordion_1_body_2"
-															class="accordion-collapse collapse"
-															aria-labelledby="kt_accordion_1_header_2"
-															data-bs-parent="#kt_accordion_1">
-															<div class="accordion-body">
-																<h3>암진단</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<h3>고액암</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<h3>유사암</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입금액</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-danger">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-warning">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																			<td class="bg-light-success">3,000</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
-														</div>
-													</div>
-
-													<div class="accordion-item">
-														<h2 class="accordion-header" id="kt_accordion_1_header_3">
-															<button class="accordion-button fs-4 fw-bold collapsed"
-																type="button" data-bs-toggle="collapse"
-																data-bs-target="#kt_accordion_1_body_3"
-																aria-expanded="false"
-																aria-controls="kt_accordion_1_body_3">
-																<div
-																	class="d-flex justify-content-between align-items-center w-100">
-																	<span>실손</span>
-																	<div class="me-6">
-																		<span class="me-3">36세 현재</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
-																			3</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
-																			1</span>
-																		<span
-																			class="badge py-3 px-4 fs-7 badge-light-danger">없음
-																			1</span>
-																	</div>
-
-																</div>
-															</button>
-														</h2>
-														<div id="kt_accordion_1_body_3"
-															class="accordion-collapse collapse"
-															aria-labelledby="kt_accordion_1_header_3"
-															data-bs-parent="#kt_accordion_1">
-															<div class="accordion-body">
-																<h3>질병의료비</h3>
-																<table
-																	class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
-																	<thead class="fs-7 fw-bolder">
-																		<tr>
-																			<th class="table-active"></th>
-																			<th class="table-active">20대</th>
-																			<th class="table-active">30대</th>
-																			<th class="table-active">40대</th>
-																			<th class="table-active">50대</th>
-																			<th class="table-active">60대</th>
-																			<th class="table-active">70대</th>
-																			<th class="table-active">80대</th>
-																			<th class="table-active">90대</th>
-																		</tr>
-																	</thead>
-																	<tbody class="">
-																		<tr>
-																			<td>표준금액</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																			<td>3,000</td>
-																		</tr>
-																		<tr>
-																			<td>가입여부</td>
-																			<td class="bg-light-danger">가입</td>
-																			<td class="bg-light-danger">가입</td>
-																			<td class="bg-light-warning">가입</td>
-																			<td class="bg-light-warning">가입</td>
-																			<td class="bg-light-warning">가입</td>
-																			<td class="bg-light-success">가입</td>
-																			<td class="bg-light-success">가입</td>
-																			<td class="bg-light-success">가입</td>
-																		</tr>
-																	</tbody>
-																</table>
-																
-															</div>
-														</div>
-													</div>
-												</div>
-												<!--end::Accordion-->
-											</div>
-											<!-- end:: 생애주기별 보장현황 -->
-										</div>
+										<table class="w-100">
+											<tbody>
+												<tr>
+													<td rowspan="2">
+														<h1 class="text-center m-0">최고객</h1>
+													</td>
+													<td>
+														<span class="fw-bolder me-3">생년월일</span>
+														1987-06-05
+													</td>
+													<td>
+														<span class="fw-bolder me-3">만연령</span>
+														36
+													</td>
+													<td>
+														<span class="fw-bolder me-3">상령일</span>
+														12월 5일
+													</td>
+													<td rowspan="2" class="w-150px">
+														<button type="button" href="#"
+															class="btn btn-primary">
+															<span class="svg-icon svg-icon-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.5" x="11.364" y="20.364" width="16"
+																		height="2" rx="1"
+																		transform="rotate(-90 11.364 20.364)"
+																		fill="currentColor" />
+																	<rect x="4.36396" y="11.364" width="16" height="2"
+																		rx="1" fill="currentColor" />
+																</svg>
+															</span>
+															PDF다운로드
+														</button></td>
+												</tr>
+												<tr>
+													<td>
+														<span class="fw-bolder me-3">성별</span>
+														<span class="badge badge-light-danger">여</span>
+													</td>
+													<td>
+														<span class="fw-bolder me-3">보험연령</span>
+														36
+													</td>
+													<td>보험료 오르는 날까지 <span class="badge badge-light-primary">123</span>일 남음
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 									<!--카드 바디 끝-->
 								</div>
 								<!--카드 끝-->
+								<div class="d-flex align-items-center bg-light-success rounded p-5 mb-7">
+									<div class="flex-grow-1 me-2">
+										<p class="mb-1"><span class="fw-bolder text-primary me-1">2022.05.11</span>보험 가입 상태를
+											기준으로 분석한 자료입니다. 기준일자 이후 보험계약의 변동사항은 반영되지 않았을 수 있습니다. (분석일: 2022-05-27)</p>
+										<p class="mb-1">보험료 합계 금액은 매월납, 년납의 월납 금액 기준이며, 그 외 납기방식은 합계에서 제외됩니다.</p>
+										<p class="mb-1">단체보험은 보험료 합계 금액에서 제외됩니다.</p>
+										<p class="mb-1">보장분석은 보험에 대한 이해를 돕고 중복가입 등의 확인을 위해 제공되는 서비스로 보험금 지급의 근거가 될 수 없습니다.
+											자세한 사항은 해당 보험의 약관 및 증권을 참조하시기 바랍니다.</p>
+									</div>
+								</div>
+								<div id="kt_project_users_table_pane" class="tab-pane fade active show mb-10">
+									<!--카드 시작-->
+									<div class="card card-flush">
+										<!--카드 바디 시작-->
+										<div class="card-body">
+											<ul class="nav nav-tabs nav-line-tabs mb-5 fs-6">
+												<li class="nav-item">
+													<a class="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">보험
+														가입 현황</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_2">주요특약별 보장
+														현황</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_3">생애주기별
+														보장현황</a>
+												</li>
+											</ul>
+
+											<div class="tab-content" id="myTabContent">
+												<!-- begin:: 보험 가입 현황 -->
+												<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
+													<div class="row">
+														<div class="col-6">
+															<div class="bg-light-primary rounded p-5">
+																<div class="flex-grow-1 me-2">
+																	<p class="mb-1 d-flex justify-content-between">
+																		<span>정상계약</span>
+																		<span class="fw-bolder ">6건</span>
+																	</p>
+																	<p class="mb-1 d-flex justify-content-between">&nbsp;
+																	</p>
+																	<p class="mb-1 d-flex justify-content-between">
+																		<span>월 납입 보험료</span>
+																		<span class="fw-bolder text-primary ">1,000,000
+																			원</span>
+																	</p>
+
+																</div>
+															</div>
+														</div>
+														<div class="col-6">
+
+															<div class="bg-light-primary rounded p-5 ">
+																<div class="flex-grow-1 me-2">
+																	<p class="mb-1 d-flex justify-content-between">
+																		<span>총 보험료 합계</span>
+																		<span class="fw-bolder ">33,936,000 원</span>
+																	</p>
+																	<p class="mb-1 d-flex justify-content-between">
+																		<span>납입완료 보험료 합계
+																		</span>
+																		<span class=" ">18,140,000 원
+																		</span>
+																	</p>
+																	<p class="mb-1 d-flex justify-content-between">
+																		<span>납입예정 보험료 합계 </span>
+																		<span class="fw-bolder text-primary ">15,796,000 원
+																		</span>
+																	</p>
+
+																</div>
+															</div>
+
+														</div>
+													</div>
+													<table
+														class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+														<thead class="fs-7 fw-bolder">
+															<tr>
+																<th class="min-w-250px text-start"" style=" width:30%">상품명</th>
+																<th>피보험자 <br />(계약자)</th>
+																<th>보장기간</th>
+																<th>납입기간</th>
+																<th>납입횟수</th>
+																<th>납입 보험료</th>
+																<th class="min-w-250px">총 보험료</th>
+															</tr>
+														</thead>
+														<tbody class="">
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">메리츠화재</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6">(무)메리츠
+																		케어프리보험 생활케어프리</p>
+																</td>
+																<td>최고객</td>
+																<td>2012.05.22 ~ 2042.05.22</td>
+																<td>30년</td>
+																<td>120/360</td>
+																<td>
+																	<p class="mb-1">매월납</p>
+																	<p class="mb-1">50,000 원</p>
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">18,000,000 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">6,000,000 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">12,000,000
+																				원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">교보라이프플래닛</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6">노후생활지킴이</p>
+																</td>
+																<td>최고객</td>
+																<td>2015.05.30 ~ 2045.05.30
+																</td>
+																<td>30년</td>
+																<td>4/30</td>
+																<td>
+																	<p class="mb-1">년납</p>
+																	<p class="mb-1">500,000 원</p>
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">12,000,000 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">84,000,000 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">3,600,000
+																				원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">KB손해보험
+																	</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6">LIG생활보장보험
+																	</p>
+																</td>
+																<td>최고객<p>(최아빠)</p>
+																</td>
+																<td>2012.05.22 ~ 2042.05.22
+
+																</td>
+																<td>일시납
+																</td>
+																<td>1/1</td>
+																<td>
+																	<p class="mb-1">일시납</p>
+																	<p class="mb-1">3,600,000 원</p>
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">3,600,000 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">3,600,000 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">0 원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">모두손해보험</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6">이거저거일부만보장보험
+																	</p>
+																</td>
+																<td>최고객</td>
+																<td>2015.05.30 ~ 2045.05.30
+																</td>
+																<td> <span class="text-danger">교보문의중</span></td>
+																<td> <span class="text-danger">교보문의중</span></td>
+																<td>
+																	<p class="mb-1">기타</p>
+																	<p class="mb-1">123,000 원</p>
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">12,000,000 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">84,000,000 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">3,600,000
+																				원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">
+																	이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명이름이길어서글자수가넘칠때어떻게할지테스트하는보험사명
+																	</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6"><span
+																			class="badge badge-primary me-1">실손</span>상품명
+																		길어져도 줄바꿈해서 다 출력 이거저거의료비실손보험품명 길어져도 줄바꿈해서 다 출력
+																		이거저거의료비실손보험품명 길어져도 줄바꿈해서 다 출력 이거저거의료비실손보험품명 길어져도
+																		줄바꿈해서 다 출력 이거저거의료비실손보험
+																	</p>
+																</td>
+																<td>최고객</td>
+																<td>2015.05.30 ~ 2045.05.30
+																</td>
+																<td>1년</td>
+																<td>4/30</td>
+																<td>
+																	<p class="mb-1">매월납</p>
+																	<p class="mb-1">500,000 원</p>
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">12,000,000 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">84,000,000 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">3,600,000
+																				원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-start"">
+																	<p class=" text-gray-400 fw-bold d-block fs-7 mb-1">기업사랑보험</p>
+																	<p class="text-gray-800 fw-bolder mb-1 fs-6"><span
+																			class="badge badge-success me-1">단체</span>노후생활지킴이
+																	</p>
+																</td>
+																<td>최고객<p>(대감컴퍼니)</p>
+																</td>
+																<td>2015.05.30 ~ 2045.05.30
+																</td>
+																<td>-</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	<div class="flex-grow-1 me-2">
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>총 보험료</span>
+																			<span class="fw-bolder ">- 원</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입완료 보험료
+																			</span>
+																			<span class=" ">- 원
+																			</span>
+																		</p>
+																		<p class="mb-1 d-flex justify-content-between">
+																			<span>납입예정 보험료 </span>
+																			<span class="fw-bolder text-primary ">- 원
+																			</span>
+																		</p>
+																	</div>
+																</td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+												<!-- end:: 보험 가입 현황 -->
+												<!-- begin:: 주요특약별 보장 현황 -->
+												<div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel" style="overflow: auto; height:100vh">
+													<style>
+														.sticky-top{
+															position: sticky;
+															top: 0;
+															z-index: 1;
+														}
+														.sticky-left {
+															position: sticky;
+															left: 0;
+														}
+
+														table#sticky-table th.table-active{
+															background-color: #F5F8FA
+														}
+														table#sticky-table td,table#sticky-table th  {
+															background-color: white;
+														}
+																											table#sticky-table table td {
+																													background-color: transparent;
+																											}
+													</style>
+													<table id="sticky-table"
+														class="table table-hover table-rounded border table-row-bordered  gs-3 mt-4 text-center align-middle">
+														<thead class="fs-7  align-middle sticky-top">
+															<tr>
+																<th colspan="4" rowspan="5" class="p-0 sticky-left">
+																	<table>
+																		<thead>
+																			<tr>
+																				<th class="table-active min-w-200px fw-bolder" colspan="2" rowspan="4"
+																				style="width:20%">보험가입정보
+																				</th>
+																				<th class="min-w-200px table-active fw-bolder h-40px" 	colspan="2">보장기간</th>
+																			</tr>
+																			<tr>
+																				<th class="table-active fw-bolder h-40px" colspan="2">보험사</th>
+
+																			</tr>
+																			<tr>
+																				<th class="table-active fw-bolder h-60px" colspan="2">보험상품명</th>
+
+																			</tr>
+																			<tr>
+																				<th class="table-active fw-bolder h-40px">월 보험료 <br />합계</th>
+																<th>999,999원
+																</th>
+																			</tr>
+																			<tr>
+																				<th class="table-active fw-bolder" colspan="2">주요 특약</th>
+																<th class="table-active fw-bolder h-40px">가입금액<br />합계
+																</th>
+																<th class="table-active fw-bolder h-40px">적정여부
+																</th>
+																			</tr>
+																			
+																		</thead>
+																	</table>
+
+																</th>
+																
+																<th class="min-w-200px h-40px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+																<th class="min-w-200px">2022.05~2060.05
+																</th>
+															</tr>
+															<tr>
+																<th class="h-40px">메리츠화재</th>
+																<th>교보라이프플래닛생명
+																</th>
+																<th>KB손해보험
+
+																</th>
+																<th>메리츠화재
+																</th>
+																<th>메리츠화재
+																</th>
+																<th>메리츠화재
+																</th>
+																<th>메리츠화재
+																</th>
+																<th>메리츠화재
+																</th>
+																<th>메리츠화재
+																</th>
+															</tr>
+															<tr>
+																<th class="h-60px"><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리</span>
+																</th>
+																<th><span class="ellipsis2">노후생활지킴이</span>
+																</th>
+																<th><span class="ellipsis2">LIG생활보장보험</span>
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+																</th>
+																<th><span class="ellipsis2">(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해(무)메리츠 케어프리보험 생활케어프리 이거저거다보장해</span>
+																</th>
+															</tr>
+															<tr>
+																
+																<th class="h-40px">매월납 50,000 원
+																</th>
+																<th>분기납 100,000 원
+
+
+																</th>
+																<th>일시납 3,600,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+																<th>매월납 50,000원
+
+																</th>
+															</tr>
+															<tr>
+																
+																<th class="table-active fw-bolder h-40px">1
+
+
+																</th>
+																<th class="table-active fw-bolder">2
+
+																</th>
+																<th class="table-active fw-bolder">3
+
+																</th>
+																<th class="table-active fw-bolder">4
+
+																</th>
+																<th class="table-active fw-bolder">5
+
+																</th>
+																<th class="table-active fw-bolder">6
+
+																</th>
+																<th class="table-active fw-bolder">7
+
+																</th>
+																<th class="table-active fw-bolder">8
+
+																</th>
+																<th class="table-active fw-bolder">9
+
+																</th>
+															</tr>
+														</thead>
+														<tbody class="">
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-success"><i
+																							class="fas fa-check me-1 text-white"></i>충분</span>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-warning"><i
+																					class="fas fa-chart-pie me-1 text-white"></i>부족</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td>-</td>
+																<td>
+																	-
+																</td>
+																<td>
+																	1,000
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="4" class="sticky-left ">
+																	<table class="w-100">
+																		<tbody>
+																			<tr>
+																				<td class="text-start">
+																					보장 구분
+																				</td>
+																				<td class="text-start">담보명</td>
+																				<td>3,000</td>
+																				<td><span class="badge badge-danger"><i
+																					class="fas fa-ban me-1 text-white"></i>없음</span>
+																		</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																
+																<td>1,000</td>
+																<td>
+																	2,000
+																</td>
+																<td>
+																	-
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+																<td>
+																</td>
+															</tr>
+
+
+														</tbody>
+													</table>
+												</div>
+												<!-- end:: 주요특약별 보장 현황 -->
+												<!-- begin:: 생애주기별 보장현황 -->
+
+												<div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel">
+													<!--begin::Accordion-->
+													<div class="accordion" id="kt_accordion_1">
+														<div class="accordion-item">
+															<h2 class="accordion-header" id="kt_accordion_1_header_1">
+																<button class="accordion-button fs-4 fw-bold collapsed"
+																	type="button" data-bs-toggle="collapse"
+																	data-bs-target="#kt_accordion_1_body_1"
+																	aria-expanded="false"
+																	aria-controls="kt_accordion_1_body_1">
+																	<div
+																		class="d-flex justify-content-between align-items-center w-100">
+																		<span>2대 질환</span>
+																		<div class="me-6">
+																			<span class="me-3">36세 현재</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
+																				3</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
+																				1</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-danger">없음
+																				1</span>
+																		</div>
+
+																	</div>
+																</button>
+															</h2>
+															<div id="kt_accordion_1_body_1"
+																class="accordion-collapse collapse"
+																aria-labelledby="kt_accordion_1_header_1"
+																data-bs-parent="#kt_accordion_1">
+																<div class="accordion-body">
+																	<h3>암진단</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<h3>고액암</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<h3>유사암</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+
+														<div class="accordion-item">
+															<h2 class="accordion-header" id="kt_accordion_1_header_2">
+																<button class="accordion-button fs-4 fw-bold collapsed"
+																	type="button" data-bs-toggle="collapse"
+																	data-bs-target="#kt_accordion_1_body_2"
+																	aria-expanded="false"
+																	aria-controls="kt_accordion_1_body_2">
+																	<div
+																		class="d-flex justify-content-between align-items-center w-100">
+																		<span>암</span>
+																		<div class="me-6">
+																			<span class="me-3">36세 현재</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
+																				3</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
+																				1</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-danger">없음
+																				1</span>
+																		</div>
+
+																	</div>
+																</button>
+															</h2>
+															<div id="kt_accordion_1_body_2"
+																class="accordion-collapse collapse"
+																aria-labelledby="kt_accordion_1_header_2"
+																data-bs-parent="#kt_accordion_1">
+																<div class="accordion-body">
+																	<h3>암진단</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<h3>고액암</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<h3>유사암</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입금액</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-danger">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-warning">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																				<td class="bg-light-success">3,000</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+
+														<div class="accordion-item">
+															<h2 class="accordion-header" id="kt_accordion_1_header_3">
+																<button class="accordion-button fs-4 fw-bold collapsed"
+																	type="button" data-bs-toggle="collapse"
+																	data-bs-target="#kt_accordion_1_body_3"
+																	aria-expanded="false"
+																	aria-controls="kt_accordion_1_body_3">
+																	<div
+																		class="d-flex justify-content-between align-items-center w-100">
+																		<span>실손</span>
+																		<div class="me-6">
+																			<span class="me-3">36세 현재</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-success me-3">충분
+																				3</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-warning me-3">부족
+																				1</span>
+																			<span
+																				class="badge py-3 px-4 fs-7 badge-light-danger">없음
+																				1</span>
+																		</div>
+
+																	</div>
+																</button>
+															</h2>
+															<div id="kt_accordion_1_body_3"
+																class="accordion-collapse collapse"
+																aria-labelledby="kt_accordion_1_header_3"
+																data-bs-parent="#kt_accordion_1">
+																<div class="accordion-body">
+																	<h3>질병의료비</h3>
+																	<table
+																		class="table table-hover table-rounded border table-row-bordered gy-3 gs-7 mt-4 text-center align-middle">
+																		<thead class="fs-7 fw-bolder">
+																			<tr>
+																				<th class="table-active"></th>
+																				<th class="table-active">20대</th>
+																				<th class="table-active">30대</th>
+																				<th class="table-active">40대</th>
+																				<th class="table-active">50대</th>
+																				<th class="table-active">60대</th>
+																				<th class="table-active">70대</th>
+																				<th class="table-active">80대</th>
+																				<th class="table-active">90대</th>
+																			</tr>
+																		</thead>
+																		<tbody class="">
+																			<tr>
+																				<td>표준금액</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																				<td>3,000</td>
+																			</tr>
+																			<tr>
+																				<td>가입여부</td>
+																				<td class="bg-light-danger">가입</td>
+																				<td class="bg-light-danger">가입</td>
+																				<td class="bg-light-warning">가입</td>
+																				<td class="bg-light-warning">가입</td>
+																				<td class="bg-light-warning">가입</td>
+																				<td class="bg-light-success">가입</td>
+																				<td class="bg-light-success">가입</td>
+																				<td class="bg-light-success">가입</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--end::Accordion-->
+												</div>
+												<!-- end:: 생애주기별 보장현황 -->
+											</div>
+										</div>
+										<!--카드 바디 끝-->
+									</div>
+									<!--카드 끝-->
+								</div>
+								</div>
+							<!--컨테이너 끝-->
+						</div>
+						<!--포스트 끝-->
+					</div>
+					<!--콘텐트 끝-->
+					<!--푸터 시작-->
+					<div class="footer py-3 d-flex flex-lg-column" id="kt_footer">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+							<div class="text-dark order-2 order-md-1">
+								<span class="text-muted fw-bold me-1">2022©</span>
+								<span class="text-gray-800">Microprotect Insucore IAS</span>
 							</div>
 						</div>
-						<!--컨테이너 끝-->
+						<!--end::Container-->
 					</div>
-					<!--포스트 끝-->
+					<!--푸터 끝-->
 				</div>
-				<!--콘텐트 끝-->
-				<!--푸터 시작-->
-				<div class="footer py-3 d-flex flex-lg-column" id="kt_footer">
-					<!--begin::Container-->
-					<div
-						class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
-						<div class="text-dark order-2 order-md-1">
-							<span class="text-muted fw-bold me-1">2022©</span>
-							<span class="text-gray-800">Microprotect Insucore IAS</span>
-						</div>
-					</div>
-					<!--end::Container-->
-				</div>
-				<!--푸터 끝-->
+				<!--랩퍼 끝-->
 			</div>
-			<!--랩퍼 끝-->
+			<!--페이지 끝-->
 		</div>
-		<!--페이지 끝-->
-	</div>
-	<!--루트 끝-->
-	<!--begin::Scrolltop-->
-	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-		<span class="svg-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
-					fill="currentColor"></rect>
-				<path
-					d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-					fill="currentColor"></path>
-			</svg>
-		</span>
-		<!--end::Svg Icon-->
-	</div>
-	<!--end::Scrolltop-->
+		<!--루트 끝-->
+		
+		<!--begin::Scrolltop-->
+		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+			<span class="svg-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor"></rect>
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor"></path>
+				</svg>
+			</span>
+			<!--end::Svg Icon-->
+		</div>
+		<!--end::Scrolltop-->
 
-	<!--begin::Javascript-->
-
-	<script>
-		var hostUrl = "assets/";
-
-	</script>
-	<!--begin::Global Javascript Bundle(used by all pages)-->
-	<script src="assets/plugins/global/plugins.bundle.js"></script>
-	<script src="assets/js/scripts.bundle.js"></script>
-	<!--end::Global Javascript Bundle-->
-	<!--begin::Page Vendors Javascript(used by this page)-->
-	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-	<!--end::Page Vendors Javascript-->
-	<!--begin::Page Custom Javascript(used by this page)-->
-	<script src="assets/js/custom/apps/customers/list/export.js"></script>
-	<script src="assets/js/custom/apps/customers/list/list.js"></script>
-	<script src="assets/js/custom/apps/customers/add.js"></script>
-	<script src="assets/js/widgets.bundle.js"></script>
-	<script src="assets/js/custom/widgets.js"></script>
-	<script src="assets/js/custom/apps/chat/chat.js"></script>
-	<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-	<!--end::Page Custom Javascript-->
-	<!--end::Javascript-->
-</body>
-<!--end::Body-->
-
+		<!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="assets/js/custom/apps/customers/list/export.js"></script>
+		<script src="assets/js/custom/apps/customers/list/list.js"></script>
+		<script src="assets/js/custom/apps/customers/add.js"></script>
+		<script src="assets/js/widgets.bundle.js"></script>
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		<!--end::Page Custom Javascript-->
+		<script>
+			$("#kt_datepicker_1").flatpickr();
+			$("#kt_datepicker_2").flatpickr();
+		</script>
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
 </html>
