@@ -209,6 +209,26 @@
 					<div id="kt_header" style class="header align-items-stretch">
 						<!--컨테이너 시작-->
 						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--어사이드 모바일 토글 시작-->
+							<div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+								<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_aside_mobile_toggle">
+									<span class="svg-icon svg-icon-1">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+											<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="currentColor" />
+											<path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="currentColor" />
+										</svg>
+									</span>
+								</div>
+							</div>
+							<!--어사이드 모바일 토글 끝-->
+							<!--모바일 로고 시작-->
+							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+								<a href="2-home.html" class="d-lg-none">
+									<img alt="Logo" src="http://192.168.219.107:5501/assets/media/logos/logo-1-light.svg" class="h-30px" />
+								</a>
+							</div>
+							<!--모바일 로고 끝-->
+
 							<!--랩퍼 시작 2-->
 							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
 								<!--네브바 시작-->
@@ -326,43 +346,61 @@
 											<div class="row g-8 mb-7">
 												<div class="col-lg-8 mb-5">
 													<label class="fs-7 form-label fw-bolder text-gray-400">상담상태</label>
-													<div class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="checkbox" value="" id="chx_chkAll">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															전체
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															상담전
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															부재중
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															상담일정미확정
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															상담일정확정
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															가망고객
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															보험가입완료
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault">
-															보험가입거절
-														</label>
-														<input class="form-check-input" type="checkbox" value="" name="chk">
-														<label class="form-check-label fs-6 fw-bold" for="flexCheckDefault">
-															상담취소
-														</label>
+													<div class="d-flex w-100 card-group form-check form-check-custom form-check-solid">
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" id="chx_chkAll">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																전체
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																상담전
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																부재중
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																상담일정미확정
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																상담일정확정
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																가망고객
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																보험가입완료
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold me-10" for="flexCheckDefault" style="word-break: keep-all;">
+																보험가입거절
+															</label>
+														</div>
+														<div class="d-flex">
+															<input class="form-check-input" type="checkbox" value="" name="chk">
+															<label class="form-check-label fs-6 fw-bold" for="flexCheckDefault" style="word-break: keep-all;">
+																상담취소
+															</label>
+														</div>
 													</div>
 												</div>
 											</div>
