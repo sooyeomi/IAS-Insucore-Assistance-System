@@ -7,12 +7,12 @@
 
 🛠️ 기술 스택 및 프레임워크
 
-* Metronic 사용
+Metronic 사용
 이 프로젝트는 Metronic을 기반으로 퍼블리싱되었습니다.  
 Metronic은 Bootstrap을 기반으로 한 Admin Dashboard 프레임워크로,  
 다양한 UI 컴포넌트, 테마, 반응형 디자인을 제공하여 관리 시스템 구축에 최적화된 솔루션입니다.
 
-* 기본 기술
+기본 기술
 - HTML, SCSS, JavaScript (ES6)
 - Metronic + Bootstrap 기반 컴포넌트 활용
 - jQuery 일부 사용 (기존 코드 유지보수)
@@ -24,9 +24,6 @@ Metronic은 Bootstrap을 기반으로 한 Admin Dashboard 프레임워크로,
 ✅ 반응형 웹 (Responsive Web)
   - PC, 태블릿, 모바일 환경에서 원활하게 동작하도록 구현
   - 다양한 해상도 대응을 위한 플렉서블 레이아웃 적용
-
-🌙 다크 모드 지원
-  - Metronic의 다크 모드 테마 적용 및 CSS 변수 활용하여 커스텀 스타일링
 
 📞 업무 보조 기능
   - 고객 정보 공유 및 업무 기록 작성 기능  
